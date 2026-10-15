@@ -1,5 +1,11 @@
 name: Daily Bilibili price collection
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-prices.yml'
+      - 'scripts/**'
+      - 'config/**'
   schedule:
     # UTC 00:17 = Asia/Shanghai 08:17. Avoid the busy top of the hour.
     - cron: '17 0 * * *'
@@ -43,3 +49,4 @@ jobs:
         run: |
           echo "::error::Collection failed. Previous prices are retained; failure status was saved."
           exit 1
+
