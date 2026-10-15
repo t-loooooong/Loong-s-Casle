@@ -1,0 +1,6 @@
+{
+  "accounts": [{ "uid": "382486276", "name": "郭大鑫鑫鑫鑫呀" }],
+  "maxPagesPerAccount": 5,
+  "requestDelayMs": 1500,
+  "scheduleLabel": "每天约 08:17（北京时间）检查，执行可能延迟"
+}

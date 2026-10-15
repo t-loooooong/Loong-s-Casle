@@ -1,0 +1,45 @@
+name: Daily Bilibili price collection
+on:
+  schedule:
+    # UTC 00:17 = Asia/Shanghai 08:17. Avoid the busy top of the hour.
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gunpla-main-data
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm run check
+      - name: Collect public metadata
+        id: collect
+        continue-on-error: true
+        run: npm run collect
+      - name: Validate static output
+        run: npm run build
+      - name: Save history and collection status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: daily price check"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Report collector failure
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::Collection failed. Previous prices are retained; failure status was saved."
+          exit 1
