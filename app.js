@@ -35,7 +35,7 @@ function render() {
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
       <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
       <td class="date">${date(item.publishedAt)}</td>
-      <td><a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>${item.extractionMethod === "subtitle_title_crosscheck" ? `<details class="quote-evidence"><summary>字幕依据 · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>AI字幕对照标题提取，未核对原视频画面。</small></details>` : ""}</td>
+      <td><a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>${["subtitle_title_crosscheck", "local_auto_subtitle"].includes(item.extractionMethod) ? `<details class="quote-evidence"><summary>字幕依据 · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>字幕或本地转写提取，未核对原视频画面。</small></details>` : ""}</td>
     </tr>`).join("") : '<tr><td colspan="6" class="empty">没有匹配的型号，请清除筛选条件后重试。</td></tr>';
 
   els.total.textContent = state.quotes.length;
@@ -68,6 +68,12 @@ async function load() {
       els.note.textContent = `最近成功检查 ${datetime(state.meta.lastSyncAt)} · ${schedule}${stale ? " · 超过两天未更新，请留意数据日期" : ""}`;
     }
     if (state.meta.lastSubtitleImportAt) els.note.textContent += ` · 字幕导入 ${datetime(state.meta.lastSubtitleImportAt)}（${Number(state.meta.lastSubtitleImportVideos || 0)}条视频）`;
+    if (state.meta.localCollection) {
+      const local = state.meta.localCollection;
+      els.note.textContent = `本机采集：${local.ok === true ? "最近完整检查" : "本次未完成，保留已有记录"} ${datetime(local.attemptedAt)} · 上次完整检查 ${datetime(local.lastSuccessAt)} · 导入 ${Number(state.meta.lastLocalImportParts || 0)}个分P`;
+      if (local.lastSuccessAt && Date.now() - Date.parse(local.lastSuccessAt) > 48 * 3600000) els.note.textContent += " · 超过两天未成功检查，请启动本机采集";
+      if (state.meta.check?.ok === false) els.note.textContent += " · 云端接口采集仍失败";
+    }
   } catch (error) {
     console.error(error);
     els.rows.innerHTML = '<tr><td colspan="6" class="empty">价格文件暂时不可用，请稍后刷新。</td></tr>';

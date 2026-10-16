@@ -62,3 +62,12 @@ test("video title markup is escaped", async () => {
   assert.match(p.element("#price-rows").innerHTML, /&lt;img/);
   assert.ok(!p.element("#price-rows").innerHTML.includes("<img"));
 });
+test("local progress is distinct from failed cloud collection", async () => {
+  const p = await page({records,meta:{localCollection:{ok:false,attemptedAt:'2026-10-16T00:00Z',lastSuccessAt:null},lastLocalImportParts:3,check:{ok:false}}});
+  assert.match(p.element('#update-note').textContent,/本次未完成.*3个分P.*云端接口采集仍失败/);
+});
+test("automated subtitle evidence is visible and escaped", async () => {
+  const p = await page({records:[{...records[1],extractionMethod:'local_auto_subtitle',evidence:{page:2,startSeconds:15,text:'<script>bad</script>'}}],meta:{}});
+  assert.match(p.element('#price-rows').innerHTML,/P2.*15.0秒/);
+  assert.match(p.element('#price-rows').innerHTML,/&lt;script&gt;/);
+});
