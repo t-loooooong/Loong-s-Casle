@@ -1,0 +1,25 @@
+{
+  "sourceUid": "382486276",
+  "sourceExportedAt": "2026-10-16T01:48:43.713Z",
+  "reviewMethod": "字幕原文与视频标题对照，未看原视频画面；ASR 数字与价格有效性仍需核对",
+  "observations": [
+    {"bvid":"BV1sKJ26WEFk","modelName":"空降百式","grade":"MG","priceCents":17000,"start":1.34,"end":4.2,"quoteText":"空降百世背刺170了","notes":"字幕写作“百世”，依据标题对应“百式”；另提百亿169。两种渠道价格分开保留，未核对商品画面。","alternatives":[{"label":"百亿（字幕原称）","priceCents":16900,"quoteText":"百亿是169"}]},
+    {"bvid":"BV1sKJ26WEFk","modelName":"BC元祖","grade":"OTHER","priceCents":1900,"start":10.75,"end":12.669,"quoteText":"BC的元祖背刺19了","notes":"BC 为标题原称，等级未确认；字幕报价19，未确认是否含运费或优惠条件。"},
+    {"bvid":"BV1sKJ26WEFk","modelName":"传令骑兵","grade":"HG","priceCents":null,"start":5.679,"end":10.75,"quoteText":"上上的是190","notes":"标题有该型号；这段仅报190、192、110，没有明确说型号，暂不分配价格。"},
+    {"bvid":"BV18aJy6ZEoX","modelName":"海盗","grade":"HG","priceCents":7200,"start":1.34,"end":2.62,"quoteText":"海盗背刺72了","notes":"具体海盗版本未说明；HG 等级按标题同组列举推断，未核对原画面。"},
+    {"bvid":"BV18aJy6ZEoX","modelName":"海兹尔二号机","grade":"HG","priceCents":6900,"start":3.259,"end":7.099,"quoteText":"感觉还能降2号机背刺69了","notes":"“2号机”与标题中唯一二号机对应；HG 按标题同组列举推断，另提百亿67。","alternatives":[{"label":"百亿（字幕原称）","priceCents":6700,"quoteText":"百亿是67"}]},
+    {"bvid":"BV18aJy6ZEoX","modelName":"空降百式","grade":"MG","priceCents":17500,"start":8.009,"end":11.25,"quoteText":"空降百世背刺175了","notes":"字幕写作“百世”，按标题对应“百式”；另提百亿169，不与主报价混同。","alternatives":[{"label":"百亿（字幕原称）","priceCents":16900,"quoteText":"百亿是169啊"}]},
+    {"bvid":"BV18aJy6ZEoX","modelName":"路西法","grade":"HG","priceCents":8900,"start":11.25,"end":14.07,"quoteText":"路西法背刺89了","notes":"HG 等级按标题同组列举推断；另提百亿八十七，即87，未核对优惠条件。","alternatives":[{"label":"百亿（字幕原称）","priceCents":8700,"quoteText":"百亿八十七"}]},
+    {"bvid":"BV18aJy6ZEoX","modelName":"卡尔玛扎古","grade":"HG","priceCents":5400,"start":14.07,"end":15.83,"quoteText":"卡尔玛扎古背刺54了","notes":"标题卡尔玛与字幕卡尔玛扎古对应，未核对商品规格。"},
+    {"bvid":"BV18aJy6ZEoX","modelName":"高战蟹","grade":"HG","priceCents":null,"start":16.789,"end":18.35,"quoteText":"高山希背刺58了","notes":"字幕“高山希”可能是标题的高战蟹，但尚未确认，候选58元暂不作为价格发布。"},
+    {"bvid":"BV1w1Jk63E4v","modelName":"S高达","grade":"HG","priceCents":7500,"start":21.179,"end":25.32,"quoteText":"我之前从来没弄过S高达背刺75了","notes":"HG 按标题同组列举推断；后句“核损是68”可能指盒损，候选68暂未作为可用渠道价格。"},
+    {"bvid":"BV1w1Jk63E4v","modelName":"马克贝老虎","grade":"MG","priceCents":21500,"start":39.56,"end":41.399,"quoteText":"马克贝贝茨215了","notes":"按标题将“马克贝”对应马克贝老虎；“贝茨”可能是背刺的误听。保留原文，未核对原视频。"},
+    {"bvid":"BV1w1Jk63E4v","modelName":"复刻元祖","grade":"OTHER","priceCents":2900,"start":41.399,"end":46.02,"quoteText":"元祖背刺29了","notes":"与前句连读为标题中的复刻元祖；具体系列/等级未确认，暂列OTHER。"},
+    {"bvid":"BV1w1Jk63E4v","modelName":"七号机","grade":"HG","priceCents":6500,"start":46.02,"end":49.02,"quoteText":"7号机背刺65了","notes":"标题七号机与字幕7号机对应；另提百亿62，未确认当下仍可购买。","alternatives":[{"label":"百亿（字幕原称）","priceCents":6200,"quoteText":"百亿是62"}]},
+    {"bvid":"BV1w1Jk63E4v","modelName":"盒损卡沙","grade":"MG","priceCents":null,"start":33.159,"end":39.56,"quoteText":"而准的卡莎背刺388啦","notes":"标题盒损卡沙与字幕“卡莎”可能对应；另提好盒393及过往凑单340上下，需看画面确认版本、盒况和现价，暂不发布金额。"}
+  ],
+  "notImported": [
+    {"bvid":"BV1sKJ26WEFk","reason":"标题提到P2 MG月光X，但本次只提供P1字幕，没有为P2编造价格。"},
+    {"bvid":"BV1w1Jk63E4v","reason":"200、193、189附近没有明确型号；活动日期、10亿、三斤等不是模型报价。"}
+  ]
+}

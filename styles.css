@@ -80,6 +80,10 @@ tbody tr:hover { background: #f8fbfd; }
 .date { color: #64748b; font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .source { max-width: 390px; color: #344256; font-size: 13px; line-height: 1.55; text-decoration-color: #cbd5e1; text-underline-offset: 4px; }
 .source:hover { color: var(--cyan-dark); }
+.quote-alternative { display: block; max-width: 190px; margin-top: 5px; color: var(--muted); font-size: 11px; }
+.quote-evidence { max-width: 390px; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.quote-evidence summary { color: var(--cyan-dark); cursor: pointer; }
+.quote-evidence p { margin: 7px 0; }
 .empty { height: 150px; color: var(--muted); text-align: center; }
 .table-footer { display: flex; justify-content: space-between; gap: 20px; padding: 14px 20px; background: #f7f9fc; color: var(--muted); font-size: 11px; }
 
