@@ -18,9 +18,13 @@ const money = (cents) => cents == null ? "待提取" : new Intl.NumberFormat("zh
 const date = (value) => value ? new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(new Date(value)) : "—";
 const datetime = (value) => value ? new Intl.DateTimeFormat("zh-CN", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "尚未自动同步";
 const statusLabels = { verified: "已核对", extracted: "自动提取", pending: "待复核" };
-function productVisual(item) {
+function hasProductImage(item) {
   const photo=item.productImage;
-  if(!photo || !/^https:\/\/bandai-a\.akamaihd\.net\//.test(photo.url) || !/^https:\/\/www\.bandaispirits\.co\.jp\//.test(photo.sourceUrl))return '';
+  return photo && /^https:\/\/(?:bandai-a\.akamaihd\.net|staticcdn\.bandaihobbysite\.cn)\//.test(photo.url) && /^https:\/\/(?:www\.bandaispirits\.co\.jp|bandaihobbysite\.cn)\//.test(photo.sourceUrl);
+}
+function productVisual(item) {
+  if(!hasProductImage(item))return '<figure class="product-visual product-visual--pending" title="暂无可唯一确认的商品图片"><span class="product-photo-fallback">待配图</span></figure>';
+  const photo=item.productImage;
   return `<figure class="product-visual"><a href="${escapeHtml(photo.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(photo.credit)}"><img class="product-photo" src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.alt)}" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-photo-fallback">图片暂不可用</span></figure>`;
 }
 els.rows.addEventListener('error',event=>{
@@ -41,7 +45,7 @@ function render() {
 
   els.rows.innerHTML = state.filtered.length ? state.filtered.map((item) => `
     <tr>
-      <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small>${productVisual(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">官方商品图 ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : ''}</div></div></td>
+      <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small>${hasProductImage(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">官方商品图 ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : '<small class="image-disclaimer">型号或版本待确认</small>'}</div></div></td>
       <td><span class="grade grade--${escapeHtml(item.grade)}">${escapeHtml(item.grade)}</span></td>
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
       <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
@@ -85,6 +89,7 @@ async function load() {
       if (local.lastSuccessAt && Date.now() - Date.parse(local.lastSuccessAt) > 48 * 3600000) els.note.textContent += " · 超过两天未成功检查，请启动本机采集";
       if (state.meta.check?.ok === false) els.note.textContent += " · 云端接口采集仍失败";
     }
+    if(state.meta.imageCoverage)els.note.textContent+=` · 商品图 ${Number(state.meta.imageCoverage.withImage)}/${Number(state.meta.imageCoverage.total)}`;
   } catch (error) {
     console.error(error);
     els.rows.innerHTML = '<tr><td colspan="6" class="empty">价格文件暂时不可用，请稍后刷新。</td></tr>';

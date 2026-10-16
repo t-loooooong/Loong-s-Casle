@@ -89,3 +89,7 @@ test('unsafe image URLs are ignored rather than rendered',async()=>{
   const p=await page({records:[{...records[0],productImage:{url:'javascript:alert(1)',sourceUrl:'https://www.bandaispirits.co.jp/test'}}],meta:{}});
   assert.ok(!p.element('#price-rows').innerHTML.includes('javascript:'));
 });
+test('missing images have a clear placeholder and do not claim a fake photo',async()=>{
+  const p=await page({records,meta:{imageCoverage:{withImage:0,total:2}}});
+  assert.match(p.element('#price-rows').innerHTML,/待配图/);assert.match(p.element('#price-rows').innerHTML,/型号或版本待确认/);assert.match(p.element('#update-note').textContent,/商品图 0\/2/);
+});

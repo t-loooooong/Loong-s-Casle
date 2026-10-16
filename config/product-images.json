@@ -4,7 +4,9 @@
     {
       "id": "hguc-xi-gundam-2021",
       "grade": "HG",
-      "modelNames": ["柯西高达"],
+      "modelNames": [
+        "柯西高达"
+      ],
       "scale": "1/144",
       "image": {
         "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000156711_1.jpg",
@@ -14,7 +16,608 @@
         "credit": "图片来源：BANDAI SPIRITS；©創通・サンライズ",
         "caption": "2021年版参考图，非卖家实拍",
         "note": "官方2021年版参考图；报价具体版本以原视频和卖家信息为准，不代表具体盒况。"
+      },
+      "allowUnknownScale": true
+    },
+    {
+      "id": "official-cn-3150",
+      "grade": "MGSD",
+      "modelNames": [
+        "命运高达"
+      ],
+      "scale": "SD",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20260224/94bda3fe5a7acebbcf85c4ca216c31af.jpeg",
+        "alt": "MGSD 命运高达",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/3150",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MGSD 命运高达；报价具体版本及盒况以原视频和卖家信息为准。"
       }
+    },
+    {
+      "id": "official-cn-1094",
+      "grade": "HG",
+      "modelNames": [
+        "创制燃焰高达"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20231114/33f1f7d569ea23d1240390eecdd231eb.jpg",
+        "alt": "HGBF 1/144 创制燃焰高达",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/1094",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGBF 1/144 创制燃焰高达；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-368",
+      "grade": "RG",
+      "modelNames": [
+        "海牛高达"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20230223/e87282b544b1ee6dc62e98508aa972a5.jpg",
+        "alt": "RG 1/144 Hi-ν高达",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/368",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：RG 1/144 Hi-ν高达；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-3037",
+      "grade": "MG",
+      "modelNames": [
+        "天狼座"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20260109/493e58616441cced833774dd0a7ef803.jpg",
+        "alt": "MG 1/100 高达巴巴托斯 天狼型",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/3037",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MG 1/100 高达巴巴托斯 天狼型；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-237",
+      "grade": "HG",
+      "modelNames": [
+        "传令骑兵"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20230209/ec27ace3e958b660c511a0d392d2ef98.jpg",
+        "alt": "HG 1/144 传令骑兵",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/237",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HG 1/144 传令骑兵；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-1182",
+      "grade": "HG",
+      "modelNames": [
+        "路西法"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20231116/c03809c69f06f2ed59257ad27d0b89b9.jpg",
+        "alt": "HG 1/144 高达 Ｇ路西法",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/1182",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HG 1/144 高达 Ｇ路西法；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-3082",
+      "grade": "HG",
+      "modelNames": [
+        "高战蟹"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20250619/79833cbcbc50af76a85b675a381c8431.jpg",
+        "alt": "HGUC 1/144 高战蟹",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/3082",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 高战蟹；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-2446",
+      "grade": "RG",
+      "modelNames": [
+        "零号机"
+      ],
+      "scale": "未标比例",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20240111/2edd86305ae41fbda82716da16812755.jpg",
+        "alt": "RG 泛用人型决战兵器 人造人EVA试作零号机",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/2446",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：RG 泛用人型决战兵器 人造人EVA试作零号机；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-1394",
+      "grade": "HG",
+      "modelNames": [
+        "格雷兹艾因"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20231120/bf0ce5195edf9ae22894178ec5a169b6.jpg",
+        "alt": "HG 1/144 格雷兹 艾因",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/1394",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HG 1/144 格雷兹 艾因；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-964",
+      "grade": "HG",
+      "modelNames": [
+        "德莱森"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20231108/5e4acbbcc18e83284eb6be9a2f5ee8e1.jpg",
+        "alt": "HGUC 1/144 德莱森",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/964",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 德莱森；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-3347",
+      "grade": "MG",
+      "modelNames": [
+        "卡碧尼"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20260123/cf8c7acef0f1498e514690a4770894f4.jpg",
+        "alt": "MG 1/100 AMX-004 卡碧尼",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/3347",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MG 1/100 AMX-004 卡碧尼；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-955",
+      "grade": "MG",
+      "modelNames": [
+        "月光X"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20231108/c69db22d5c86bc315bada7018dea2f5d.jpg",
+        "alt": "MG 1/100 GX9900 高达X",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/955",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MG 1/100 GX9900 高达X；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-cn-2186",
+      "grade": "MG",
+      "modelNames": [
+        "马格南"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20240108/425c9dbefb1235bb19364e261064b8aa.jpg",
+        "alt": "MG 1/100 高达AGE-II马格南",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/2186",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MG 1/100 高达AGE-II马格南；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4573102621566000",
+      "grade": "MG",
+      "modelNames": [
+        "杰斯塔加农"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000098895_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4573102621566000&grp_id=5325",
+        "alt": "ＭＧ 1/100 ジェスタ・キャノン",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：ＭＧ 1/100 ジェスタ・キャノン；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112164087000",
+      "grade": "MG",
+      "modelNames": [
+        "卡多勇士"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000074268_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112164087000&grp_id=5325",
+        "alt": "MG 1/100 MS-14A ゲルググ(アナベル・ガトー専用機)",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "2003年版参考图，版本待确认",
+        "note": "参考商品：MG 1/100 MS-14A ゲルググ(アナベル・ガトー専用機)；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112909190000",
+      "grade": "MG",
+      "modelNames": [
+        "马克贝老虎"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000088027_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112909190000&grp_id=5325",
+        "alt": "ＭＧ 1/100 MS-07B マ・クベ専用グフ",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：ＭＧ 1/100 MS-07B マ・クベ専用グフ；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4902425563183000",
+      "grade": "MG",
+      "modelNames": [
+        "勇士加农"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000092415_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4902425563183000&grp_id=5325",
+        "alt": "MG 1/100 ゲルググキャノン",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "1997年版参考图，版本待确认",
+        "note": "参考商品：MG 1/100 ゲルググキャノン；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4549660257684000",
+      "grade": "RE/100",
+      "modelNames": [
+        "维基纳"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000126421_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4549660257684000&grp_id=5325",
+        "alt": "RE/100 1/100 ビギナ・ギナ",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：RE/100 1/100 ビギナ・ギナ；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112052650000",
+      "grade": "HG",
+      "modelNames": [
+        "扎克艾因"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000075387_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112052650000&grp_id=5325",
+        "alt": "HGUC 1/144 ゼクアイン",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 ゼクアイン；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112642653000",
+      "grade": "HG",
+      "modelNames": [
+        "德尔塔Plus"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000092265_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112642653000&grp_id=5325",
+        "alt": "HGUC 1/144 デルタプラス",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 デルタプラス；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112656612000",
+      "grade": "HG",
+      "modelNames": [
+        "X分裂者"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000092183_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112656612000&grp_id=5325",
+        "alt": "HGAW 1/144 ガンダムXディバイダー",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGAW 1/144 ガンダムXディバイダー；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4902425782096000",
+      "grade": "HG",
+      "modelNames": [
+        "沙漠大魔"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000075933_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4902425782096000&grp_id=5325",
+        "alt": "HGUC 1/144 ドムトローペン",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "热带型参考图，配色待确认",
+        "note": "参考商品：HGUC 1/144 ドムトローペン；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4573102692085000",
+      "grade": "HG",
+      "modelNames": [
+        "七号机"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000238683_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4573102692085000&grp_id=5325",
+        "alt": "HG 1/144 ガンダム7号機",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HG 1/144 ガンダム7号機；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112966957000",
+      "grade": "HG",
+      "modelNames": [
+        "迦巴卡利"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000098615_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112966957000&grp_id=5325",
+        "alt": "HG 1/144 カバカーリー",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HG 1/144 カバカーリー；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112390899000",
+      "grade": "HG",
+      "modelNames": [
+        "加撒C"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000069594_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112390899000&grp_id=5325",
+        "alt": "HGUC 1/144 ガザC",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 ガザC；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4902425776354000",
+      "grade": "HG",
+      "modelNames": [
+        "海军勇士"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000075974_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4902425776354000&grp_id=5325",
+        "alt": "HGUC 1/144 MS-14F ゲルググマリーネ",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 MS-14F ゲルググマリーネ；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112459350000",
+      "grade": "HG",
+      "modelNames": [
+        "海兹尔二号机"
+      ],
+      "scale": "未标比例",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000068779_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112459350000&grp_id=5325",
+        "alt": "HGUC ガンダムTR-1 ヘイズル2号機",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC ガンダムTR-1 ヘイズル2号機；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112135513000",
+      "grade": "HG",
+      "modelNames": [
+        "卡尔玛扎古"
+      ],
+      "scale": "未标比例",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000074607_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112135513000&grp_id=5325",
+        "alt": "HGUC ザクII (ガルマ専用機)",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC ザクII (ガルマ専用機)；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112040206000",
+      "grade": "HG",
+      "modelNames": [
+        "S高达"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000075484_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112040206000&grp_id=5325",
+        "alt": "HGUC 1/144 MSA-0011 Sガンダム",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGUC 1/144 MSA-0011 Sガンダム；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112341129000",
+      "grade": "MG",
+      "modelNames": [
+        "空降百式"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000070532_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112341129000&grp_id=5325",
+        "alt": "MG 1/100 百式＋バリュートシステム",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：MG 1/100 百式＋バリュートシステム；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    },
+    {
+      "id": "official-jp-4543112851352000",
+      "grade": "MG",
+      "modelNames": [
+        "盒损卡沙"
+      ],
+      "scale": "1/100",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000085689_1.jpg",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?prd_id=4543112851352000&grp_id=5325",
+        "alt": "MG 1/100 MSN-04 サザビーVer.ka",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；版权归各权利人所有",
+        "caption": "卡版沙扎比参考图，非盒况实拍",
+        "note": "参考商品：MG 1/100 MSN-04 サザビーVer.ka；报价具体版本和盒况以原视频、卖家信息为准。"
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "grade": "HG",
+      "modelName": "强人背包",
+      "reason": "可能为配件套装或整机简称，需确认商品全称"
+    },
+    {
+      "grade": "OTHER",
+      "modelName": "BC元祖",
+      "reason": "品牌和版本未确认，不用万代其他元祖图代替"
+    },
+    {
+      "grade": "OTHER",
+      "modelName": "复刻元祖",
+      "reason": "系列及版本未确认"
+    },
+    {
+      "grade": "HG",
+      "modelName": "海盗",
+      "reason": "缺少X1/X2等具体型号和装备版本"
+    },
+    {
+      "grade": "MG",
+      "modelName": "黑GNX",
+      "reason": "需确认GN-X衍生型及配色，不用普通版代替"
+    },
+    {
+      "grade": "HG",
+      "modelName": "水扎古",
+      "reason": "水中型与海洋型简称可能混用，需核对商品全称"
+    },
+    {
+      "grade": "HG",
+      "modelName": "GP03",
+      "reason": "需区分雄蕊本体、石斛兰及其他比例版本"
+    },
+    {
+      "grade": "MG",
+      "modelName": "加强V",
+      "reason": "需核对V-Dash等正式商品名，暂不按昵称猜图"
     }
   ]
 }
