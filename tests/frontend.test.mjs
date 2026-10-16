@@ -16,7 +16,7 @@ async function page(payload, fail = false, savedWidths = null, storageThrows = f
   let done;
   const loaded = new Promise(resolve => { done = resolve; });
   const context = vm.createContext({
-    document: { querySelector: element, querySelectorAll: selector => selector === "#price-table col" ? columns : handles }, Intl, Date, Set, console: { error() {} },
+    document: { querySelector: element, querySelectorAll: selector => selector === "#price-table col" ? columns : handles }, Intl, Date, Set, URL, console: { error() {} },
     localStorage: { getItem() { if(storageThrows)throw new Error('blocked'); return stored; }, setItem(key,value) { if(storageThrows)throw new Error('blocked'); stored=value; } },
     fetch: async url => {
       assert.equal(url, "/data/prices.json");
@@ -165,5 +165,20 @@ test('keyboard resizing is clamped and storage failures do not break data render
 test('corrupt and outdated stored widths safely fall back to defaults',async()=>{
   for(const value of ['broken','[1,2]','[340,100,190,120,140,-1]','[340,100,"190",120,140,400]']){
     const p=await page({records},false,value);assert.equal(p.columns[2].style.width,'190px');assert.equal(p.columns[5].style.width,'400px');
+  }
+});
+
+test('manual entries have honest provenance and uploaded photos are not labelled official',async()=>{
+  const url='/uploads/'+'a'.repeat(64)+'.jpg';
+  const p=await page({records:[{...records[0],id:'manual:test',manual:true,status:'manual',notes:'<script>unsafe</script>',videoUrl:null,sourceUrl:'javascript:alert(1)',productImage:{kind:'manual-upload',url,sourceUrl:url,alt:'上传图',caption:'站长上传参考图'}}]});
+  const html=p.element('#price-rows').innerHTML;
+  assert.match(html,/站长上传图/);assert.match(html,/站长手动添加 · 非视频采集/);assert.match(html,/&lt;script&gt;/);
+  assert.doesNotMatch(html,/官方商品图|可信度|javascript:/);assert.equal(p.element('#metric-verified').textContent,0);
+  p.element('#status').value='manual';p.render();assert.equal(p.names().length,1);
+});
+test('manual image flags do not allow arbitrary or protocol-relative image URLs',async()=>{
+  for(const url of ['https://evil.example/image.jpg','//evil.example/a.jpg','/uploads/../evil.jpg']){
+    const p=await page({records:[{...records[0],productImage:{kind:'manual-upload',url,sourceUrl:url}}]});
+    assert.doesNotMatch(p.element('#price-rows').innerHTML,/class="product-photo"/);
   }
 });

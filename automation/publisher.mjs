@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { appendCandidates, validateBundle } from './quotes.mjs';
 import { publishHistory } from './remote.mjs';
+import { scanManualUploads } from './manual.mjs';
 const HERE = dirname(fileURLToPath(import.meta.url)), STATE = resolve(HERE,'state');
 async function firstExisting(paths) {for(const path of paths){try{await access(path);return path;}catch(e){if(e.code!=='ENOENT')throw e;}}throw Error('缺少采集依赖文件，请保留完整源码目录。');}
 const {validateRecords} = await import(pathToFileURL(await firstExisting([resolve(HERE,'../edgeone-gunpla-price-radar/scripts/dataset.mjs'),resolve(HERE,'../scripts/dataset.mjs')])));
@@ -40,6 +41,7 @@ const lock = createServer(socket => socket.destroy());
 await new Promise((ok,fail) => {lock.once('error',()=>fail(Error('发布程序已运行，或端口47381被占用')));lock.listen(47381,'127.0.0.1',ok);});
 const processed = await json(resolve(STATE,'processed.json'),{});
 async function cycle() {
+  await scanManualUploads(watch,processed,api,()=>atomic(resolve(STATE,'processed.json'),processed));
   // Extension snapshots are cumulative; only process newest to avoid dozens of commits
   // and prevent an old failure snapshot from replacing a newer success status.
   const files = (await readdir(watch)).filter(n => /^bundle-[\w-]+\.json$/.test(n)).sort().reverse().slice(0,1);

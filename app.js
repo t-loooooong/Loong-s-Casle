@@ -18,10 +18,11 @@ const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => 
 const money = (cents) => cents == null ? "待提取" : new Intl.NumberFormat("zh-CN", { style: "currency", currency: "CNY", maximumFractionDigits: cents % 100 === 0 ? 0 : 2 }).format(cents / 100);
 const date = (value) => Number.isFinite(Date.parse(value)) ? new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "—";
 const datetime = (value) => value ? new Intl.DateTimeFormat("zh-CN", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "尚未自动同步";
-const statusLabels = { verified: "已核对", extracted: "自动提取", pending: "待复核" };
+const statusLabels = { verified: "已核对", extracted: "自动提取", pending: "待复核", manual: "手动添加" };
+const safeSource = value => { try { const url=new URL(value); return url.protocol==='https:'&&!url.username&&!url.password ? url.href : null; } catch { return null; } };
 function hasProductImage(item) {
   const photo=item.productImage;
-  return photo && /^https:\/\/(?:bandai-a\.akamaihd\.net|staticcdn\.bandaihobbysite\.cn)\//.test(photo.url) && /^https:\/\/(?:www\.bandaispirits\.co\.jp|bandaihobbysite\.cn)\//.test(photo.sourceUrl);
+  return photo && ((photo.kind==='manual-upload' && /^\/uploads\/[a-f0-9]{64}\.jpg$/.test(photo.url) && photo.sourceUrl===photo.url) || (/^https:\/\/(?:bandai-a\.akamaihd\.net|staticcdn\.bandaihobbysite\.cn)\//.test(photo.url) && /^https:\/\/(?:www\.bandaispirits\.co\.jp|bandaihobbysite\.cn)\//.test(photo.sourceUrl)));
 }
 function productVisual(item) {
   if(!hasProductImage(item))return '<figure class="product-visual product-visual--pending" title="暂无可唯一确认的商品图片"><span class="product-photo-fallback">待配图</span></figure>';
@@ -61,18 +62,18 @@ function render() {
     const active = state.sort.key === key;
     document.querySelector(`#${key}-header`).setAttribute("aria-sort", active ? (state.sort.direction === "asc" ? "ascending" : "descending") : "none");
     document.querySelector(`#${key}-sort-indicator`).textContent = active ? (state.sort.direction === "asc" ? "↑" : "↓") : "↕";
-    const label = key === "price" ? "价格" : "视频日期";
+    const label = key === "price" ? "价格" : "日期";
     document.querySelector(`#sort-${key}`).setAttribute("aria-label", `${label}，${active ? (state.sort.direction === "asc" ? "当前升序，点击降序" : "当前降序，点击升序") : "点击排序"}`);
   }
 
   els.rows.innerHTML = state.filtered.length ? state.filtered.map((item) => `
     <tr>
-      <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small>${hasProductImage(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">官方商品图 ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : '<small class="image-disclaimer">型号或版本待确认</small>'}</div></div></td>
+      <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · ${item.manual ? '站长手动记录' : `可信度 ${Number(item.confidence || 0)}%`}</small>${hasProductImage(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">${item.productImage.kind==='manual-upload'?'站长上传图':'官方商品图'} ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : '<small class="image-disclaimer">型号或版本待确认</small>'}<button type="button" class="image-upload-button" data-image-record="${escapeHtml(item.id)}">${hasProductImage(item)?'更换图片':'上传图片'}</button></div></div></td>
       <td><span class="grade grade--${escapeHtml(displayGrade(item.grade))}">${escapeHtml(displayGrade(item.grade))}</span></td>
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
-      <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
+      <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : item.manual ? "manual" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
       <td class="date">${date(item.publishedAt)}</td>
-      <td><a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>${["subtitle_title_crosscheck", "local_auto_subtitle"].includes(item.extractionMethod) ? `<details class="quote-evidence"><summary>字幕依据 · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>字幕或本地转写提取，未核对原视频画面。</small></details>` : ""}</td>
+      <td>${item.manual ? `<span class="manual-source">站长手动添加 · 非视频采集</span>${safeSource(item.sourceUrl)?`<br><a class="source" href="${escapeHtml(safeSource(item.sourceUrl))}" target="_blank" rel="noreferrer">查看商品来源 ↗</a>`:''}<p class="manual-notes">${escapeHtml(item.notes)}</p>` : `<a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>`}${["subtitle_title_crosscheck", "local_auto_subtitle"].includes(item.extractionMethod) ? `<details class="quote-evidence"><summary>字幕依据 · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>字幕或本地转写提取，未核对原视频画面。</small></details>` : ""}</td>
     </tr>`).join("") : '<tr><td colspan="6" class="empty">没有匹配的型号，请清除筛选条件后重试。</td></tr>';
 
   els.total.textContent = state.quotes.length;
@@ -120,6 +121,7 @@ async function load() {
   }
   setGrades();
   render();
+  globalThis.manualDataLoaded?.(state.meta);
 }
 
 [els.search, els.grade, els.status].forEach((element) => element.addEventListener("input", render));
