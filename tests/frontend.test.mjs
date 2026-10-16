@@ -4,16 +4,20 @@ import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 
 const source = await readFile(new URL("../app.js", import.meta.url), "utf8");
-async function page(payload, fail = false) {
+async function page(payload, fail = false, savedWidths = null, storageThrows = false) {
   const elements = new Map();
   const element = (key) => {
-    if (!elements.has(key)) elements.set(key, { value: ["#grade", "#status"].includes(key) ? "all" : "", textContent: "", innerHTML: "", listeners: {}, addEventListener(event, fn) { this.listeners[event] = fn; }, setAttribute() {} });
+    if (!elements.has(key)) elements.set(key, { value: ["#grade", "#status"].includes(key) ? "all" : "", textContent: "", innerHTML: "", style: {}, attributes: {}, classList: { add() {}, remove() {} }, listeners: {}, addEventListener(event, fn) { this.listeners[event] = fn; }, setAttribute(key, value) { this.attributes[key] = String(value); }, setPointerCapture() {} });
     return elements.get(key);
   };
+  const columns = Array.from({ length: 6 }, (_, i) => element(`col${i}`));
+  const handles = Array.from({ length: 6 }, (_, i) => element(`handle${i}`));
+  let stored = savedWidths;
   let done;
   const loaded = new Promise(resolve => { done = resolve; });
   const context = vm.createContext({
-    document: { querySelector: element }, Intl, Date, Set, console: { error() {} },
+    document: { querySelector: element, querySelectorAll: selector => selector === "#price-table col" ? columns : handles }, Intl, Date, Set, console: { error() {} },
+    localStorage: { getItem() { if(storageThrows)throw new Error('blocked'); return stored; }, setItem(key,value) { if(storageThrows)throw new Error('blocked'); stored=value; } },
     fetch: async url => {
       assert.equal(url, "/data/prices.json");
       queueMicrotask(() => queueMicrotask(done));
@@ -23,7 +27,7 @@ async function page(payload, fail = false) {
   vm.runInContext(source, context);
   await loaded;
   await new Promise(resolve => setImmediate(resolve));
-  return { element, render: () => vm.runInContext("render()", context) };
+  return { element, columns, handles, stored: () => stored, render: () => vm.runInContext("render()", context), names: () => Array.from(vm.runInContext("state.filtered.map(item => item.modelName)", context)), rawGrades: () => Array.from(vm.runInContext("state.quotes.map(item => item.grade)", context)) };
 }
 const records = [
   { modelName: "柯西高达", grade: "HG", priceCents: 24700, status: "verified", videoTitle: "测试视频", videoUrl: "https://www.bilibili.com/video/BV1CVdmB5E8P/" },
@@ -92,4 +96,74 @@ test('unsafe image URLs are ignored rather than rendered',async()=>{
 test('missing images have a clear placeholder and do not claim a fake photo',async()=>{
   const p=await page({records,meta:{imageCoverage:{withImage:0,total:2}}});
   assert.match(p.element('#price-rows').innerHTML,/待配图/);assert.match(p.element('#price-rows').innerHTML,/型号或版本待确认/);assert.match(p.element('#update-note').textContent,/商品图 0\/2/);
+});
+
+test('RE/100 and RE share the RE badge and filter without rewriting source grades', async () => {
+  const p=await page({records:[{...records[0],grade:'RE/100'}, {...records[1],grade:'RE'}]});
+  assert.match(p.element('#grade').innerHTML, /value="RE">RE</);
+  assert.doesNotMatch(p.element('#grade').innerHTML, /RE\/100/);
+  p.element('#grade').value='RE';p.render();
+  assert.equal(p.names().length,2);
+  assert.doesNotMatch(p.element('#price-rows').innerHTML,/RE\/100/);
+  assert.deepEqual(p.rawGrades(),['RE/100','RE']);
+});
+
+const sortableRecords = [
+  {...records[0],modelName:'低价',priceCents:9000,publishedAt:'2025-12-31T23:00:00Z'},
+  {...records[1],modelName:'高价',priceCents:100000,publishedAt:'2026-01-01T01:00:00Z'},
+  {...records[0],modelName:'待提取',priceCents:null,publishedAt:null},
+  {...records[0],modelName:'中价',priceCents:20000,publishedAt:'2026-01-01T00:00:00Z'},
+];
+test('price header toggles numeric order, keeping missing prices last',async()=>{
+  const p=await page({records:sortableRecords});
+  p.element('#sort-price').listeners.click();
+  assert.deepEqual(p.names(),['低价','中价','高价','待提取']);
+  assert.equal(p.element('#price-header').attributes['aria-sort'],'ascending');
+  p.element('#sort-price').listeners.click();
+  assert.deepEqual(p.names(),['高价','中价','低价','待提取']);
+  assert.equal(p.element('#price-header').attributes['aria-sort'],'descending');
+  assert.equal(p.element('#date-header').attributes['aria-sort'],'none');
+  p.element('#grade').value='HG';p.render();
+  assert.deepEqual(p.names(),['中价','低价','待提取']);
+});
+test('date sorting uses complete timestamps across years, missing/invalid dates last',async()=>{
+  const p=await page({records:[...sortableRecords,{...records[0],modelName:'无效日期',publishedAt:'bad'}]});
+  assert.deepEqual(p.names(),['高价','中价','低价','待提取','无效日期']);
+  p.element('#sort-date').listeners.click();
+  assert.deepEqual(p.names(),['低价','中价','高价','待提取','无效日期']);
+  assert.equal(p.element('#date-header').attributes['aria-sort'],'ascending');
+  p.element('#sort-date').listeners.click();
+  assert.equal(p.names()[0],'高价');
+});
+test('equal prices retain their source order',async()=>{
+  const p=await page({records:records.map(r=>({...r,priceCents:100}))});
+  p.element('#sort-price').listeners.click();assert.deepEqual(p.names(),['柯西高达','海牛高达']);
+  p.element('#sort-price').listeners.click();assert.deepEqual(p.names(),['柯西高达','海牛高达']);
+});
+test('drag resizes only the chosen column and persists on pointer release',async()=>{
+  const p=await page({records});const handle=p.handles[2];
+  handle.listeners.pointerdown({button:0,pointerId:1,clientX:100,preventDefault(){}});
+  handle.listeners.pointermove({pointerId:2,clientX:500});
+  assert.equal(p.columns[2].style.width,'190px');
+  handle.listeners.pointermove({pointerId:1,clientX:180});
+  assert.equal(p.columns[2].style.width,'270px');assert.equal(p.columns[1].style.width,'100px');
+  assert.equal(p.element('#price-table').style.width,'1370px');
+  handle.listeners.pointerup({pointerId:1});
+  assert.equal(JSON.parse(p.stored())[2],270);
+  const reloaded=await page({records},false,p.stored());assert.equal(reloaded.columns[2].style.width,'270px');
+  reloaded.element('#reset-columns').listeners.click();assert.equal(reloaded.columns[2].style.width,'190px');
+});
+test('keyboard resizing is clamped and storage failures do not break data rendering',async()=>{
+  const p=await page({records},false,null,true);const h=p.handles[0];
+  const press=key=>h.listeners.keydown({key,preventDefault(){}});
+  press('Home');assert.equal(p.columns[0].style.width,'250px');
+  press('ArrowLeft');assert.equal(p.columns[0].style.width,'250px');
+  press('ArrowRight');assert.equal(p.columns[0].style.width,'260px');
+  press('End');press('ArrowRight');assert.equal(p.columns[0].style.width,'1200px');
+  assert.equal(h.attributes['aria-valuenow'],'1200');assert.equal(p.names().length,2);
+});
+test('corrupt and outdated stored widths safely fall back to defaults',async()=>{
+  for(const value of ['broken','[1,2]','[340,100,190,120,140,-1]','[340,100,"190",120,140,400]']){
+    const p=await page({records},false,value);assert.equal(p.columns[2].style.width,'190px');assert.equal(p.columns[5].style.width,'400px');
+  }
 });

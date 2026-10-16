@@ -1,6 +1,7 @@
-const gradeOrder = ["HG", "RG", "MG", "MGSD", "MGEX", "PG", "PGU", "EG", "SD", "RE/100", "FM", "OTHER"];
+const gradeOrder = ["HG", "RG", "MG", "MGSD", "MGEX", "PG", "PGU", "EG", "SD", "RE", "FM", "OTHER"];
+const displayGrade = (grade) => ["RE/100", "RE100", "RE"].includes(grade) ? "RE" : grade;
 
-const state = { quotes: [], filtered: [], meta: {} };
+const state = { quotes: [], filtered: [], meta: {}, sort: { key: "date", direction: "desc" } };
 const els = {
   rows: document.querySelector("#price-rows"),
   search: document.querySelector("#search"),
@@ -15,7 +16,7 @@ const els = {
 
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 const money = (cents) => cents == null ? "待提取" : new Intl.NumberFormat("zh-CN", { style: "currency", currency: "CNY", maximumFractionDigits: cents % 100 === 0 ? 0 : 2 }).format(cents / 100);
-const date = (value) => value ? new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(new Date(value)) : "—";
+const date = (value) => Number.isFinite(Date.parse(value)) ? new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "—";
 const datetime = (value) => value ? new Intl.DateTimeFormat("zh-CN", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "尚未自动同步";
 const statusLabels = { verified: "已核对", extracted: "自动提取", pending: "待复核" };
 function hasProductImage(item) {
@@ -34,19 +35,40 @@ els.rows.addEventListener('error',event=>{
   }
 },true);
 
+function sortValue(item, key) {
+  return key === "price" ? (typeof item.priceCents === "number" && Number.isFinite(item.priceCents) ? item.priceCents : null) : (Number.isFinite(Date.parse(item.publishedAt)) ? Date.parse(item.publishedAt) : null);
+}
+function compareQuotes(a, b) {
+  const left = sortValue(a, state.sort.key), right = sortValue(b, state.sort.key);
+  if (left == null) return right == null ? 0 : 1;
+  if (right == null) return -1;
+  return (left - right) * (state.sort.direction === "asc" ? 1 : -1);
+}
+function sortBy(key) {
+  if (!["price", "date"].includes(key)) return;
+  state.sort = { key, direction: state.sort.key === key ? (state.sort.direction === "asc" ? "desc" : "asc") : (key === "price" ? "asc" : "desc") };
+  render();
+}
 function render() {
   const query = els.search.value.trim().toLowerCase();
   const grade = els.grade.value;
   const status = els.status.value;
   state.filtered = state.quotes.filter((item) => {
-    const haystack = `${item.modelName} ${item.videoTitle} ${item.grade}`.toLowerCase();
-    return (!query || haystack.includes(query)) && (grade === "all" || item.grade === grade) && (status === "all" || item.status === status);
-  });
+    const haystack = `${item.modelName} ${item.videoTitle} ${item.grade} ${displayGrade(item.grade)}`.toLowerCase();
+    return (!query || haystack.includes(query)) && (grade === "all" || displayGrade(item.grade) === grade) && (status === "all" || item.status === status);
+  }).sort(compareQuotes);
+  for (const key of ["price", "date"]) {
+    const active = state.sort.key === key;
+    document.querySelector(`#${key}-header`).setAttribute("aria-sort", active ? (state.sort.direction === "asc" ? "ascending" : "descending") : "none");
+    document.querySelector(`#${key}-sort-indicator`).textContent = active ? (state.sort.direction === "asc" ? "↑" : "↓") : "↕";
+    const label = key === "price" ? "价格" : "视频日期";
+    document.querySelector(`#sort-${key}`).setAttribute("aria-label", `${label}，${active ? (state.sort.direction === "asc" ? "当前升序，点击降序" : "当前降序，点击升序") : "点击排序"}`);
+  }
 
   els.rows.innerHTML = state.filtered.length ? state.filtered.map((item) => `
     <tr>
       <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small>${hasProductImage(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">官方商品图 ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : '<small class="image-disclaimer">型号或版本待确认</small>'}</div></div></td>
-      <td><span class="grade grade--${escapeHtml(item.grade)}">${escapeHtml(item.grade)}</span></td>
+      <td><span class="grade grade--${escapeHtml(displayGrade(item.grade))}">${escapeHtml(displayGrade(item.grade))}</span></td>
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
       <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
       <td class="date">${date(item.publishedAt)}</td>
@@ -60,7 +82,7 @@ function render() {
 }
 
 function setGrades() {
-  const available = new Set(state.quotes.map((item) => item.grade));
+  const available = new Set(state.quotes.map((item) => displayGrade(item.grade)));
   els.grade.innerHTML = '<option value="all">全部等级</option>' + gradeOrder.filter((grade) => available.has(grade)).map((grade) => `<option value="${grade}">${grade}</option>`).join("");
 }
 
@@ -101,4 +123,61 @@ async function load() {
 }
 
 [els.search, els.grade, els.status].forEach((element) => element.addEventListener("input", render));
+["price", "date"].forEach((key) => document.querySelector(`#sort-${key}`).addEventListener("click", () => sortBy(key)));
+
+function initializeColumnWidths() {
+  const table = document.querySelector("#price-table");
+  const columns = Array.from(document.querySelectorAll("#price-table col"));
+  const handles = Array.from(document.querySelectorAll(".column-resizer"));
+  const defaults = [340, 100, 190, 120, 140, 400];
+  const minimums = [250, 90, 130, 115, 130, 180];
+  const storageKey = "gunpla.column-widths.v1";
+  let widths = [...defaults], dragging = null;
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    if (Array.isArray(saved) && saved.length === defaults.length && saved.every((width, i) => Number.isFinite(width) && width >= minimums[i] && width <= 1200)) widths = saved;
+  } catch { /* Browser storage may be disabled; resizing still works. */ }
+  const save = () => { try { localStorage.setItem(storageKey, JSON.stringify(widths)); } catch { /* Keep session widths. */ } };
+  const apply = () => {
+    columns.forEach((column, i) => { column.style.width = `${widths[i]}px`; });
+    table.style.width = `${widths.reduce((sum, width) => sum + width, 0)}px`;
+    handles.forEach((handle, i) => {
+      handle.setAttribute("aria-valuemin", minimums[i]);
+      handle.setAttribute("aria-valuemax", 1200);
+      handle.setAttribute("aria-valuenow", widths[i]);
+      handle.setAttribute("aria-valuetext", `${widths[i]}像素`);
+    });
+  };
+  const resize = (i, width) => { widths[i] = Math.max(minimums[i], Math.min(1200, Math.round(width))); apply(); };
+  handles.forEach((handle, i) => {
+    handle.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 || dragging) return;
+      event.preventDefault();
+      dragging = { index: i, x: event.clientX, width: widths[i], pointerId: event.pointerId };
+      handle.setPointerCapture(event.pointerId);
+      table.classList.add("is-resizing");
+    });
+    handle.addEventListener("pointermove", (event) => {
+      if (dragging?.index === i && dragging.pointerId === event.pointerId) resize(i, dragging.width + event.clientX - dragging.x);
+    });
+    const finish = (event) => {
+      if (dragging?.index !== i || dragging.pointerId !== event.pointerId) return;
+      dragging = null;
+      table.classList.remove("is-resizing");
+      save();
+    };
+    handle.addEventListener("pointerup", finish);
+    handle.addEventListener("pointercancel", finish);
+    handle.addEventListener("lostpointercapture", finish);
+    handle.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      resize(i, event.key === "Home" ? minimums[i] : event.key === "End" ? 1200 : widths[i] + (event.key === "ArrowLeft" ? -10 : 10));
+      save();
+    });
+  });
+  document.querySelector("#reset-columns").addEventListener("click", () => { widths = [...defaults]; apply(); save(); });
+  apply();
+}
+initializeColumnWidths();
 load();

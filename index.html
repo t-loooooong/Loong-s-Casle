@@ -53,9 +53,18 @@
         </div>
 
         <div class="table-card">
+          <div class="table-tools"><span>拖动表头右侧分隔线调整列宽 · 点击价格或日期切换排序</span><button id="reset-columns" type="button">恢复默认列宽</button></div>
           <div class="table-scroll">
-            <table>
-              <thead><tr><th>型号</th><th>等级</th><th>价格</th><th>状态</th><th>视频日期</th><th>来源</th></tr></thead>
+            <table id="price-table">
+              <colgroup><col /><col /><col /><col /><col /><col /></colgroup>
+              <thead><tr>
+                <th scope="col">型号<span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整型号列宽" title="拖动调整列宽；方向键微调"></span></th>
+                <th scope="col">等级<span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整等级列宽" title="拖动调整列宽；方向键微调"></span></th>
+                <th scope="col" id="price-header" aria-sort="none"><button id="sort-price" class="sort-button" type="button">价格 <span id="price-sort-indicator" aria-hidden="true">↕</span></button><span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整价格列宽" title="拖动调整列宽；方向键微调"></span></th>
+                <th scope="col">状态<span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整状态列宽" title="拖动调整列宽；方向键微调"></span></th>
+                <th scope="col" id="date-header" aria-sort="descending"><button id="sort-date" class="sort-button" type="button">视频日期 <span id="date-sort-indicator" aria-hidden="true">↓</span></button><span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整日期列宽" title="拖动调整列宽；方向键微调"></span></th>
+                <th scope="col">来源<span class="column-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="调整来源列宽" title="拖动调整列宽；方向键微调"></span></th>
+              </tr></thead>
               <tbody id="price-rows"><tr><td colspan="6" class="empty">正在加载价格数据…</td></tr></tbody>
             </table>
           </div>
