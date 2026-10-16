@@ -15,3 +15,7 @@ jobs:
           node-version: '22'
       - run: npm run check
       - run: npm run build
+      - name: Validate unattended collector
+        run: node --test automation/tests.test.mjs automation/page-smoke.test.mjs
+      - name: Validate subtitle matcher
+        run: python -m unittest discover -s automation/parser -p 'test*.py'
