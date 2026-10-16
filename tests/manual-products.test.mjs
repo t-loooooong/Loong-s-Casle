@@ -96,6 +96,11 @@ test('isolated static build includes uploaded asset and manual row without chang
     for(const name of ['scripts','config'])await cp(join(root,name),join(directory,name),{recursive:true});
     for(const name of ['data','uploads','automation'])await mkdir(join(directory,name));
     for(const name of ['index.html','styles.css','app.js','manual-ui.js','package.json','seed.json'])await copyFile(join(root,name),join(directory,name));
+    const history=JSON.parse(await readFile(join(root,'seed.json'),'utf8'));
+    const older={...history.records[0],id:'older-video',publishedAt:'2026-01-01T00:00:00Z',observedAt:'2026-10-17T00:00:00Z'};
+    const newer={...history.records[0],id:'newer-video',bvid:'BV0000000001',videoUrl:'https://www.bilibili.com/video/BV0000000001/',publishedAt:'2026-10-16T00:00:00Z',observedAt:'2026-10-16T00:00:00Z',priceCents:null,status:'pending'};
+    history.records=[older,newer];
+    await writeFile(join(directory,'data/history.json'),JSON.stringify(history));
     await copyFile(join(root,'automation/manual.mjs'),join(directory,'automation/manual.mjs'));
     const {store}=mergeManual(emptyManual(),validateManualBundle({...bundle,image:photo}));
     const asset=decodePhoto(photo);
@@ -104,10 +109,13 @@ test('isolated static build includes uploaded asset and manual row without chang
     const result=spawnSync(process.execPath,['scripts/build.mjs'],{cwd:directory,encoding:'utf8',windowsHide:true});
     assert.equal(result.status,0,result.stderr);
     const prices=JSON.parse(await readFile(join(directory,'dist/data/prices.json'),'utf8'));
-    const history=JSON.parse(await readFile(join(directory,'dist/data/history.json'),'utf8'));
+    const exportedHistory=JSON.parse(await readFile(join(directory,'dist/data/history.json'),'utf8'));
     const row=prices.records.find(row=>row.id===`manual:${id}`);
     assert.equal(row.modelName,'测试高达');assert.equal(row.productImage.url,asset.url);assert.equal(row.priceCents,19900);assert.equal(row.status,'manual');
-    assert.deepEqual(prices.meta.manualReceipts,[id]);assert.ok(!history.records.some(row=>row.manual));
+    assert.deepEqual(prices.meta.manualReceipts,[id]);assert.ok(!exportedHistory.records.some(row=>row.manual));
+    assert.deepEqual(exportedHistory,history);assert.equal(prices.records.filter(row=>!row.manual).length,1);
+    assert.equal(prices.records.find(row=>!row.manual).id,'newer-video');assert.equal(prices.records.find(row=>!row.manual).priceCents,null);
+    assert.equal(prices.meta.viewMode,'latest-per-product');assert.equal(prices.meta.hiddenOlderVideoRecords,1);
     assert.deepEqual(await readFile(join(directory,'dist',asset.path)),Buffer.from(photo.base64,'base64'));
   }finally{await rm(directory,{recursive:true,force:true});}
 });

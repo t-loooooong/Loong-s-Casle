@@ -49,6 +49,40 @@ export function latestPerVideo(records) {
   for (const record of records) latest.set(keyOf(record), record);
   return [...latest.values()].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 }
+// Display-only projection: never remove or rewrite historical observations.
+export function latestPerProduct(records) {
+  const normalize = value => String(value ?? '').normalize('NFKC').trim().replace(/\s+/g, ' ').toLowerCase();
+  const baseKey = row => JSON.stringify([['re','re100','re/100'].includes(normalize(row.grade)) ? 're' : normalize(row.grade), normalize(row.modelName)]);
+  const scaleOf = row => normalize(row.scale).replace(/\s/g, '');
+  const knownScales = new Map();
+  for (const row of records) {
+    const key = baseKey(row), scale = scaleOf(row);
+    if (!knownScales.has(key)) knownScales.set(key, new Set());
+    if (scale) knownScales.get(key).add(scale);
+  }
+  const time = value => Number.isFinite(Date.parse(value)) ? Date.parse(value) : -Infinity;
+  const newer = (row, old) => {
+    // Prefer a sourced video over a manual listing if both describe the same product.
+    if (Boolean(row.manual) !== Boolean(old.manual)) return !row.manual;
+    for (const field of ['publishedAt', 'observedAt']) {
+      if (time(row[field]) !== time(old[field])) return time(row[field]) > time(old[field]);
+    }
+    return false;
+  };
+  const latest = new Map();
+  for (const row of records) {
+    const base = baseKey(row), scales = knownScales.get(base);
+    // Missing scale can join one known scale; ambiguous scales stay separate.
+    const scale = scaleOf(row) || (scales.size === 1 ? [...scales][0] : '');
+    const key = JSON.stringify([base, scale]);
+    const old = latest.get(key);
+    if (!old || newer(row, old)) latest.set(key, row);
+  }
+  return [...latest.values()].sort((a,b) => {
+    const left=time(a.publishedAt),right=time(b.publishedAt);
+    return left===right?0:left>right?-1:1;
+  });
+}
 export async function initialize() {
   const existing = await readJson("data/history.json", null);
   if (existing !== null) return existing;
