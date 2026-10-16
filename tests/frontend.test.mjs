@@ -71,3 +71,21 @@ test("automated subtitle evidence is visible and escaped", async () => {
   assert.match(p.element('#price-rows').innerHTML,/P2.*15.0秒/);
   assert.match(p.element('#price-rows').innerHTML,/&lt;script&gt;/);
 });
+test('product photo has alt, attribution and version disclaimer',async()=>{
+  const photo={url:'https://bandai-a.akamaihd.net/bc/img/model/b/test.jpg',alt:'柯西高达',sourceUrl:'https://www.bandaispirits.co.jp/products/test',credit:'BANDAI',caption:'2021年版参考图，非卖家实拍',note:'报价版本以原视频为准'};
+  const p=await page({records:[{...records[0],productImage:photo},records[1]],meta:{}});
+  const html=p.element('#price-rows').innerHTML;
+  assert.equal((html.match(/class="product-photo"/g)||[]).length,1);
+  assert.match(html,/alt="柯西高达"/);assert.match(html,/2021年版参考图/);assert.match(html,/非卖家实拍/);
+  assert.match(html,/loading="lazy"/);assert.equal(p.element('#metric-total').textContent,2);
+});
+test('failed image hides broken thumbnail without removing price row',async()=>{
+  const p=await page({records,meta:{}});let classAdded;
+  const target={classList:{contains:c=>c==='product-photo'},closest:()=>({classList:{add:c=>classAdded=c}})};
+  p.element('#price-rows').listeners.error({target});assert.equal(target.hidden,true);assert.equal(classAdded,'image-unavailable');
+  assert.match(p.element('#price-rows').innerHTML,/柯西高达/);
+});
+test('unsafe image URLs are ignored rather than rendered',async()=>{
+  const p=await page({records:[{...records[0],productImage:{url:'javascript:alert(1)',sourceUrl:'https://www.bandaispirits.co.jp/test'}}],meta:{}});
+  assert.ok(!p.element('#price-rows').innerHTML.includes('javascript:'));
+});

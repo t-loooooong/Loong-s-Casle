@@ -1,12 +1,14 @@
 import { mkdir, copyFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { ROOT, initialize, readJson, writeJson, validateRecords, latestPerVideo } from "./dataset.mjs";
+import { attachProductImages } from './product-images.mjs';
 const history = await initialize();
 validateRecords(history.records);
 const config = await readJson("config/sources.json");
 const check = await readJson("data/check-status.json", { lastAttemptAt: null, ok: null });
+const imageCatalog = await readJson('config/product-images.json');
 await mkdir(resolve(ROOT, "dist/data"), { recursive: true });
 for (const file of ["index.html", "styles.css", "app.js"]) await copyFile(resolve(ROOT, file), resolve(ROOT, "dist", file));
-await writeJson("dist/data/prices.json", { schemaVersion: 1, records: latestPerVideo(history.records), meta: { ...history.meta, totalObservations: history.records.length, scheduleLabel: config.scheduleLabel, check } });
+await writeJson("dist/data/prices.json", { schemaVersion: 1, records: attachProductImages(latestPerVideo(history.records),imageCatalog.products), meta: { ...history.meta, totalObservations: history.records.length, scheduleLabel: config.scheduleLabel, check } });
 await writeJson("dist/data/history.json", history);
 console.log(`Built static site: ${history.records.length} historical observations. No KV or server functions required.`);

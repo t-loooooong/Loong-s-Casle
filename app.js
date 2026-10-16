@@ -18,6 +18,17 @@ const money = (cents) => cents == null ? "待提取" : new Intl.NumberFormat("zh
 const date = (value) => value ? new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(new Date(value)) : "—";
 const datetime = (value) => value ? new Intl.DateTimeFormat("zh-CN", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Shanghai" }).format(new Date(value)) : "尚未自动同步";
 const statusLabels = { verified: "已核对", extracted: "自动提取", pending: "待复核" };
+function productVisual(item) {
+  const photo=item.productImage;
+  if(!photo || !/^https:\/\/bandai-a\.akamaihd\.net\//.test(photo.url) || !/^https:\/\/www\.bandaispirits\.co\.jp\//.test(photo.sourceUrl))return '';
+  return `<figure class="product-visual"><a href="${escapeHtml(photo.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(photo.credit)}"><img class="product-photo" src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.alt)}" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-photo-fallback">图片暂不可用</span></figure>`;
+}
+els.rows.addEventListener('error',event=>{
+  if(event.target?.classList?.contains('product-photo')){
+    event.target.hidden=true;
+    event.target.closest('.product-visual')?.classList.add('image-unavailable');
+  }
+},true);
 
 function render() {
   const query = els.search.value.trim().toLowerCase();
@@ -30,7 +41,7 @@ function render() {
 
   els.rows.innerHTML = state.filtered.length ? state.filtered.map((item) => `
     <tr>
-      <td class="model"><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small></td>
+      <td class="model"><div class="product-cell">${productVisual(item)}<div><strong>${escapeHtml(item.modelName)}</strong><small>${escapeHtml(item.scale || "比例未标注")} · 可信度 ${Number(item.confidence || 0)}%</small>${productVisual(item) ? `<a class="image-credit" href="${escapeHtml(item.productImage.sourceUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.productImage.credit)}">官方商品图 ↗</a><small class="image-disclaimer" title="${escapeHtml(item.productImage.note)}">${escapeHtml(item.productImage.caption)}</small>` : ''}</div></div></td>
       <td><span class="grade grade--${escapeHtml(item.grade)}">${escapeHtml(item.grade)}</span></td>
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
       <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "products": [
+    {
+      "id": "hguc-xi-gundam-2021",
+      "grade": "HG",
+      "modelNames": ["柯西高达"],
+      "scale": "1/144",
+      "image": {
+        "url": "https://bandai-a.akamaihd.net/bc/img/model/b/1000156711_1.jpg",
+        "alt": "HGUC 1/144 柯西高达，万代官方2021年版商品图",
+        "sourceUrl": "https://www.bandaispirits.co.jp/products/search/detail.php?grp_id=5325&prd_id=4573102613318000",
+        "sourceName": "BANDAI SPIRITS",
+        "credit": "图片来源：BANDAI SPIRITS；©創通・サンライズ",
+        "caption": "2021年版参考图，非卖家实拍",
+        "note": "官方2021年版参考图；报价具体版本以原视频和卖家信息为准，不代表具体盒况。"
+      }
+    }
+  ]
+}
