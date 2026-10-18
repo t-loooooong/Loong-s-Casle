@@ -2560,6 +2560,54 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:28c0ef7f240965f6e29e3284",
+      "bvid": "BV1aAJX6SEEa",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "前瞻下淘宝店铺活动，力度和平时差不多。mg月光x3号机、p2 hg s高达背刺，mg 00xnr可考虑，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1aAJX6SEEa/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-16T09:56:38.000Z",
+      "observedAt": "2026-10-18T07:09:32.956Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货速发万代hghguc0231/144高达前哨战s高达 | ¥70 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 0,
+        "endSeconds": 2,
+        "cid": "42792059969",
+        "page": 2,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -2577,7 +2625,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 15,
+      "checkedParts": 17,
       "totalParts": 47,
       "failedParts": 1,
       "revision": "visual-2026-10-18.1"
