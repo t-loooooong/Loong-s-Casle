@@ -3542,6 +3542,122 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:fa2b8a7551df49b148c2b948",
+      "bvid": "BV1oHpk6BEgU",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mb神、mg勇士加农、卡碧尼背刺，ss86威震天降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1oHpk6BEgU/",
+      "modelName": "神高达",
+      "grade": "MB",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-14T02:27:37.000Z",
+      "observedAt": "2026-10-18T07:17:03.517Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代pbßr定mb神高达&神高达二式机动武斗传高达模 | ¥1340 | ,后天达《最后1件,现在下单后天达,超时必赔3元券",
+        "startSeconds": 18,
+        "endSeconds": 22,
+        "cid": "42724623353",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0020.jpg",
+            "seconds": 20
+          },
+          {
+            "file": "frame-0021.jpg",
+            "seconds": 21
+          },
+          {
+            "file": "frame-0022.jpg",
+            "seconds": 22
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:8777b468e64af745f4ee6e63",
+      "bvid": "BV1xjpz65EUj",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "shf西索、飞影、30周年迪迦、mg黑gnx背刺，hg沙漠大魔、盒损德莱森降价，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1xjpz65EUj/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T15:45:11.000Z",
+      "observedAt": "2026-10-18T07:17:03.517Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hguc1721/144am×·009德莱森大魔zz版 | ¥105 | 先用后付丨支持0元下单,确认收货后再付款 | 字幕：核损的德莱森降价105了",
+        "startSeconds": 13,
+        "endSeconds": 17,
+        "cid": "42716299273",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          },
+          {
+            "file": "frame-0016.jpg",
+            "seconds": 16
+          },
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "核损的德莱森降价105了",
+            "startSeconds": 12.939,
+            "endSeconds": 15.378,
+            "priceCents": 10500
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -3559,7 +3675,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 35,
+      "checkedParts": 37,
       "totalParts": 47,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1"
