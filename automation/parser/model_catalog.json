@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-16.1",
+  "version": "2026-10-18.3",
   "models": [
     {"modelName":"空降百式","grade":"MG","title":["空降百式"],"spoken":["空降百式","空降百世"]},
     {"modelName":"月光X","grade":"MG","title":["月光x"],"spoken":["月光x"]},
@@ -17,7 +17,10 @@
     {"modelName":"维基纳","grade":"RE/100","title":["维基纳"],"spoken":["维基纳","维金纳","维吉纳"]},
     {"modelName":"德莱森","grade":"HG","title":["德莱森"],"spoken":["德莱森","格莱森"]},
     {"modelName":"水扎古","grade":"HG","title":["水扎古"],"spoken":["水扎古"]},
-    {"modelName":"德尔塔Plus","grade":"HG","title":["德尔塔plus"],"spoken":["德尔塔plus","plus"]},
+    {"modelName":"德尔塔Plus","grade":"HG","title":["德尔塔plus","deltaplus","delta plus"],"spoken":["德尔塔plus","deltaplus","delta plus","plus"]},
+    {"modelName":"诺贝尔高达","grade":"HG","title":["诺贝尔"],"spoken":["诺贝尔"]},
+    {"modelName":"梅萨F01","grade":"HG","title":["梅萨"],"spoken":["梅萨"],"requiredVariant":"F01"},
+    {"modelName":"Ex-S高达","grade":"HG","title":["exs","ex-s"],"spoken":["exs","ex-s","ex x"]},
     {"modelName":"加撒C","grade":"HG","title":["加撒c","加萨c"],"spoken":["加撒c","加萨c"]},
     {"modelName":"格雷兹艾因","grade":"HG","title":["格雷兹艾因"],"spoken":["格雷兹艾因","爱因","艾因"]},
     {"modelName":"X分裂者","grade":"HG","title":["x分裂者"],"spoken":["x分裂者","分裂者"]},

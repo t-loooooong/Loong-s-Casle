@@ -8,7 +8,8 @@ import { publishHistory } from './remote.mjs';
 import { ensureTokenHelper } from './build-auth.mjs';
 import { scanManualUploads } from './manual.mjs';
 import { collectVisual, diagnoseVisual } from './visual.mjs';
-import { fuseCandidates } from './fusion.mjs';
+import { fuseCandidates, extractionCoverage } from './fusion.mjs';
+import { cleanupPublished } from './cleanup.mjs';
 async function main() {
 const HERE = dirname(fileURLToPath(import.meta.url)), STATE = resolve(HERE,'state');
 async function firstExisting(paths) {for(const path of paths){try{await access(path);return path;}catch(e){if(e.code!=='ENOENT')throw e;}}throw Error('缺少采集依赖文件，请保留完整源码目录。');}
@@ -69,6 +70,9 @@ async function cycle() {
     if (details.size > 25000000 || Date.now()-details.mtimeMs<2000) continue;
     const raw = await readFile(input), hash = createHash('sha256').update(raw).update(config.parserRevision).digest('hex');
     const bundle = JSON.parse(raw.toString('utf8')); validateBundle(bundle);
+    // Removing the newest completed download must not expose an older snapshot
+    // as a fresh update and roll the website's collection status backwards.
+    if(Date.parse(bundle.exportedAt)<Date.parse(processed.latestBundleExportedAt||'1970-01-01'))continue;
     const audit = resolve(STATE,hash); await mkdir(audit,{recursive:true});
     try { await stat(resolve(audit,'candidates.json')); } catch(e) {
       if(e.code!=='ENOENT')throw e;
@@ -80,18 +84,31 @@ async function cycle() {
     try{visual=await collectVisual(bundle,{root:resolve(STATE,'visual'),catalog:resolve(dirname(parser),'model_catalog.json'),enabled:config.visualEnabled!==false,budget:Math.max(1,Math.min(3,Number(config.visualPartsPerCycle)||2))});}
     catch{console.log('画面缓存或本机OCR暂不可用，本轮继续字幕发布；未把画面标记为成功。');visual={candidates:[],summary:{status:'partial',checkedParts:0,totalParts:bundle.videos.length,enabled:true},fingerprint:'visual-unavailable'};}
     const publicationHash=hash+':'+visual.fingerprint;
-    if(processed[publicationHash])continue;
+    if(processed[publicationHash]){
+      const removed=await cleanupPublished({state:STATE,watch,processed,parserRevision:config.parserRevision,publishedVisualKeys:visual.cacheKeys,currentName:filename,currentComplete:bundle.collection?.ok===true&&['complete','disabled'].includes(visual.summary.status)});
+      await atomic(resolve(STATE,'processed.json'),processed);
+      if(removed)console.log(`自动清理 ${removed} 个已处理文件；保留去重状态、文字证据及失败任务。`);
+      continue;
+    }
     const combined=fuseCandidates(candidates,visual.candidates);
-    await atomic(resolve(audit,'combined-candidates.json'),{candidates:combined,visual:visual.summary});
+    const coverage=extractionCoverage(candidates,visual.candidates);
+    await atomic(resolve(audit,'combined-candidates.json'),{candidates:combined,visual:visual.summary,coverage});
+    console.log(`提取完整性检查：${coverage.subtitleQuotes}条字幕金额候选，${coverage.visualQuotes}条画面候选；${coverage.unassignedSubtitleQuotes}条字幕金额未归属型号（流程完成不代表商品无漏项）。`);
     const observedAt=new Date().toISOString();
     const added = await publishHistory(api, history => {const rows=appendCandidates(history,combined,bundle,{visualSummary:visual.summary,observedAt});validateRecords(history.records);return rows.length;});
-    processed[publicationHash] = new Date().toISOString(); await atomic(resolve(STATE,'processed.json'),processed);
-    console.log(`画面检查 ${visual.summary.checkedParts}/${visual.summary.totalParts} · ${visual.summary.status}（截图保存在本机 state/visual）`);
+    processed[publicationHash] = new Date().toISOString();
+    processed.latestBundleExportedAt=bundle.exportedAt;
+    await atomic(resolve(STATE,'processed.json'),processed);
+    console.log(`画面检查 ${visual.summary.checkedParts}/${visual.summary.totalParts} · ${visual.summary.status}`);
     console.log(`${new Date().toLocaleString()} 已推送 ${added} 条候选；等待 EdgeOne 自动部署。`);
+    const removed=await cleanupPublished({state:STATE,watch,processed,parserRevision:config.parserRevision,publishedVisualKeys:visual.cacheKeys,currentName:filename,currentComplete:bundle.collection?.ok===true&&['complete','disabled'].includes(visual.summary.status)});
+    await atomic(resolve(STATE,'processed.json'),processed);
+    if(removed)console.log(`自动清理 ${removed} 个已处理文件；保留去重状态、文字证据及失败任务。`);
   }
 }
 console.log(`监控目录：${watch}\n可以继续使用电脑。不要关闭 Edge 采集页；关闭此窗口会停止网站发布。`);
 console.log('手动商品和照片发布已启用：接收此目录中的 manual-…json 发布包。');
+console.log('自动清理已启用：推送后删除成功任务截图；全部完成后删除采集包，失败任务保留重试。');
 console.log(config.visualEnabled===false?'画面OCR已关闭。':'字幕／转写＋本机画面OCR已启用；每轮处理最多2个分P，画面失败不停止字幕发布。');
 try {do {await cycle();if(!once)await new Promise(r=>setTimeout(r,10000));}while(!once);}
 catch(error){console.error(error.message);process.exitCode=1;}finally{lock.close();}

@@ -126,6 +126,8 @@ def analyse_video(video, origin):
             issues = list(base_issues)
             if len(models) != 1:
                 issues.append('model_needs_review')
+            if any(m.get('requiredVariant') and m['requiredVariant'].lower() not in (normalized+' '+str(video.get('title') or '')).lower() for m in matched):
+                issues.append('model_variant_needs_review')
             if len(prices) != 1:
                 issues.append('multiple_prices')
             if re.search(r'满\s*\d|减\s*\d|上下|左右|以下|以上|[到至~～-]\s*' + NUMBER + r'\s*(?:元|块)', evidence):
@@ -134,13 +136,23 @@ def analyse_video(video, origin):
                 issues.append('currency_needs_review')
             if start is None:
                 issues.append('no_timestamp')
-            if re.search(r'售罄|盒损|核损|核隼|没运输|无运输|预定|订金|定金|补款', evidence) or any(m['titleCondition'] for m in matched):
-                issues.append('availability_or_payment_conditions')
             relevant = evidence
+            condition_context = evidence
             if len(matched) == 1:
                 positions = [pos for m,pos in catalog_mentions(catalog, evidence) if m['modelName'] == matched[0]['modelName']]
                 if positions:
-                    relevant = evidence[max(positions):]
+                    position = max(positions)
+                    relevant = evidence[position:]
+                    # Only scope away a leading box-price follow-up when the
+                    # immediately preceding cue explicitly names a DIFFERENT
+                    # title-gated product. Otherwise retain uncertain conditions.
+                    prior_models = catalog_mentions(catalog, prior['text']) if adjacent else []
+                    different_prior = prior_models and all(m['modelName'] != matched[0]['modelName'] for m,_ in prior_models)
+                    prefix = evidence[:position]
+                    if match_source == 'current' and different_prior and re.match(r'^\s*(?:核损|盒损)(?:是)?\s*'+NUMBER, prefix):
+                        condition_context = evidence[max(0,position-4):]
+            if re.search(r'售罄|盒损|核损|核隼|没运输|无运输|预定|订金|定金|补款', condition_context) or any(m['titleCondition'] for m in matched):
+                issues.append('availability_or_payment_conditions')
             if re.search(r'之前|上次|昨天|原来|曾经|过期', relevant):
                 issues.append('historical_or_expired_price')
             if re.search(r'福袋|内容物', str(video.get('title') or '')):

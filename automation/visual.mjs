@@ -53,6 +53,12 @@ async function directorySize(path){
   for(const row of await readdir(path,{withFileTypes:true})){const file=resolve(path,row.name);if(row.isSymbolicLink())continue;if(row.isDirectory())size+=await directorySize(file);else if(row.isFile())size+=(await stat(file)).size;}
   return size;
 }
+function compactReplay(frames){
+  return frames.slice(0,90).map(f=>({file:f.file,seconds:f.seconds,width:f.width,height:f.height,lines:f.lines.filter(l=>{
+    const y=Math.min(...l.words.map(w=>w.y))/f.height;return y>=.50&&y<=.80;
+  }).map(l=>({text:String(l.text).slice(0,2000),words:[{y:Math.min(...l.words.map(w=>w.y))}]}))}));
+}
+function replaySource(source){return {bvid:source.bvid,cid:String(source.cid),page:source.page,sourceUid:source.sourceUid,publishedAt:source.publishedAt,title:source.title};}
 export async function analyzeVideo(source,{audit,catalog,log=()=>{},fetchImpl=fetch,localVideo}={}){
   await mkdir(audit,{recursive:true});
   let media;
@@ -68,26 +74,46 @@ export async function analyzeVideo(source,{audit,catalog,log=()=>{},fetchImpl=fe
     await run('powershell.exe',['-NoProfile','-NonInteractive','-Command',code],{env:{...process.env,GUNPLA_OCR_DIAGNOSE:'0',GUNPLA_OCR_OUTPUT:audit}});
     await run('python',['-X','utf8',resolve(HERE,'ocr/candidates.py'),'--audit',audit,'--catalog',catalog]);
     const result=await json(resolve(audit,'visual-candidates.json'));
-    return {ok:true,revision:VISUAL_REVISION,at:new Date().toISOString(),candidates:result.candidates,rejected:result.rejected.length};
+    return {ok:true,revision:VISUAL_REVISION,at:new Date().toISOString(),candidates:result.candidates,rejected:result.rejected.length,rejectedSamples:result.rejected.slice(0,90),replaySource:replaySource(source),replayFrames:compactReplay(await json(resolve(audit,'ocr-results.json')))};
   }finally{await unlink(videoFile).catch(()=>{});} // Only this function's newly generated private video; retain evidence frames.
 }
 export async function collectVisual(bundle,{root,catalog,enabled=true,budget=2,log=console.log,analyze=analyzeVideo}={}){
   const taskMap=new Map([...(bundle.visualTasks||[]),...bundle.videos].map(source=>[`${source.bvid}:${source.cid}`,source]));
   const summary={enabled,status:enabled?'queued':'disabled',checkedParts:0,totalParts:taskMap.size,failedParts:0,revision:VISUAL_REVISION};
   if(!enabled)return {candidates:[],summary,fingerprint:'disabled'};
+  const parserFingerprint=analyze===analyzeVideo?createHash('sha256').update(await readFile(catalog)).update(await readFile(resolve(HERE,'ocr/models.json'))).update(await readFile(resolve(HERE,'ocr/candidates.py'))).digest('hex'):'injected-analyzer';
   await mkdir(root,{recursive:true});
   let block=await json(resolve(root,'access-status.json'),{}),attempted=0;
-  const all=[],fingerprints=[];
+  const all=[],fingerprints=[],cacheKeys=[];let refreshPending=0;
   const sources=[...taskMap.values()].sort((a,b)=>Date.parse(b.publishedAt)-Date.parse(a.publishedAt)||a.page-b.page);
   let exhausted=false;
   for(const source of sources){
     const key=createHash('sha256').update(JSON.stringify([VISUAL_REVISION,source.bvid,source.cid,source.page,source.publishedAt])).digest('hex').slice(0,24);
     const audit=resolve(root,key);let cached=await json(resolve(audit,'result.json'),null);
+    // Reuse OCR text after catalog/code changes, without repeating downloads.
+    if(cached?.ok&&cached.parserFingerprint!==parserFingerprint&&attempted<budget){
+      const raw=await json(resolve(audit,'ocr-results.json'),null);
+      if(raw||(cached.replayFrames&&cached.replaySource)){
+        attempted++;
+        try{
+          log(`复用本机OCR文字重新匹配：${source.bvid} P${source.page}`);
+          await run('python',['-X','utf8',resolve(HERE,'ocr/candidates.py'),'--audit',audit,'--catalog',catalog,...(raw?[]:['--cache'])]);
+          const result=await json(resolve(audit,'visual-candidates.json'));
+          cached={...cached,candidates:result.candidates,rejected:result.rejected.length,rejectedSamples:result.rejected.slice(0,90),replaySource:replaySource(source),replayFrames:raw?compactReplay(raw):cached.replayFrames,parserFingerprint,at:new Date().toISOString()};
+          await atomic(resolve(audit,'result.json'),cached);
+        }catch{log(`画面词表重匹配暂未完成：${source.bvid}；保留旧结果，下轮重试。`);}
+      }else if(Date.now()>=(cached.retryAt||0)&&Date.now()>=(block.until||0)){
+        attempted++;
+        try{const refreshed=await analyze(source,{audit,catalog,log});cached={...refreshed,parserFingerprint};}
+        catch(error){cached={...cached,retryAt:Date.now()+6*3600000};if(error.blocked){block={until:Date.now()+6*3600000};await atomic(resolve(root,'access-status.json'),block);}log(`新版画面补采暂未完成：${source.bvid}；保留旧结果，不绕过验证。`);}
+        await atomic(resolve(audit,'result.json'),cached);
+      }
+    }
     if(!cached?.ok&&Date.now()>=(cached?.retryAt||0)&&attempted<budget&&Date.now()>=(block.until||0)&&!exhausted){
       if(await directorySize(root)>1024*1024*1024){exhausted=true;}
       if(!exhausted){
       attempted++;
-      try{cached=await analyze(source,{audit,catalog,log});}
+      try{cached={...await analyze(source,{audit,catalog,log}),parserFingerprint};}
       catch(error){
         cached={ok:false,at:new Date().toISOString(),retryAt:Date.now()+6*3600000,reason:error.blocked?'access_blocked':'unavailable'};
         log(`画面采集未完成：${source.bvid} P${source.page}。${error.message}；保留字幕结果，不绕过验证。`);
@@ -96,11 +122,12 @@ export async function collectVisual(bundle,{root,catalog,enabled=true,budget=2,l
       await mkdir(audit,{recursive:true});await atomic(resolve(audit,'result.json'),cached);
       }
     }
-    if(cached?.ok){summary.checkedParts++;all.push(...cached.candidates);}
+    if(cached?.ok){summary.checkedParts++;all.push(...cached.candidates);if(cached.parserFingerprint===parserFingerprint)cacheKeys.push(key);else refreshPending++;}
     else if(cached)summary.failedParts++;
     fingerprints.push([key,cached?.at||null,cached?.ok||false]);
   }
-  summary.status=exhausted?'cache_full':Date.now()<(block.until||0)?'blocked':summary.checkedParts===summary.totalParts?'complete':summary.failedParts?'partial':'queued';
+  summary.refreshPending=refreshPending;
+  summary.status=exhausted?'cache_full':Date.now()<(block.until||0)?'blocked':summary.checkedParts===summary.totalParts&&!refreshPending?'complete':summary.failedParts?'partial':'queued';
   const fingerprint=createHash('sha256').update(JSON.stringify([fingerprints,summary.status])).digest('hex');
-  return {candidates:all,summary,fingerprint};
+  return {candidates:all,summary,fingerprint,cacheKeys};
 }

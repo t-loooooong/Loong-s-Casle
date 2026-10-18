@@ -1,4 +1,5 @@
 import '../automation/visual.test.mjs';
+import '../automation/cleanup.test.mjs';
 import '../automation/tests.test.mjs';
 import '../automation/page-smoke.test.mjs';
 import '../automation/auth.test.mjs';

@@ -14,6 +14,8 @@ def allowed_models(title):
     title = normalize(title)
     result = []
     for model in CATALOG['models']:
+        if model.get('requiredVariant') and any(v.upper()!=model['requiredVariant'] for v in re.findall(r'f0[0-9](?![a-z0-9])', title)):
+            continue
         found = [(title.find(alias), alias) for alias in model['title'] if alias in title]
         if not found:
             continue
@@ -51,7 +53,7 @@ def resolve(models, current, price_start, prior=None):
             return [], None
         found = mentions(models, prior)
         source = 'adjacent'
-    selected = [{ 'modelName':m['modelName'], 'grade':m['grade'], 'titleCondition':m['titleCondition'] } for m,_ in found]
+    selected = [{ 'modelName':m['modelName'], 'grade':m['grade'], 'titleCondition':m['titleCondition'], 'requiredVariant':m.get('requiredVariant') } for m,_ in found]
     return selected, source if len(selected) == 1 else None
 
 def can_inherit(text):

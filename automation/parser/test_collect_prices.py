@@ -5,6 +5,27 @@ def sample(text):
     return {"bvid": "BV1CVdmB5E8P", "sourceUid": "382486276", "publishedAt": "2026-10-16T12:00:00+08:00", "subtitleText": text}
 
 class Tests(unittest.TestCase):
+    def test_messer_without_variant_is_not_silently_promoted(self):
+        v=sample('00:00:10,000 --> 00:00:12,000\n梅萨背刺85了');v['title']='hg梅萨背刺'
+        row=analyse_video(v,'fixture')[0][0]
+        self.assertEqual(row['priceCents'],8500)
+        self.assertEqual(row['modelCandidates'][0]['modelName'],'梅萨F01')
+        self.assertIn('model_variant_needs_review',row['issues'])
+        v['title']='hg梅萨F02背刺'
+        self.assertEqual(analyse_video(v,'fixture')[0][0]['modelCandidates'],[])
+    def test_prior_product_box_condition_does_not_contaminate_delta_price(self):
+        v=sample('00:00:04.019 --> 00:00:05.700\n诺贝尔降价77了\n\n00:00:05.700 --> 00:00:09.330\n核损是七十五百一十七十四plus背刺90了')
+        v['title']='hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。'
+        rows,_=analyse_video(v,'fixture')
+        delta=next(r for r in rows if r['priceCents']==9000)
+        self.assertEqual(delta['modelCandidates'],[{'grade':'HG','modelName':'德尔塔Plus'}])
+        self.assertNotIn('availability_or_payment_conditions',delta['issues'])
+        self.assertIn('implicit_cny_unit',delta['issues'])
+    def test_own_box_and_deposit_qualifiers_stay_pending(self):
+        for text in ['盒损的plus背刺90了','预定优惠商品plus背刺90了','定金plus背刺90了']:
+            v=sample(text);v['title']='hg德尔塔plus'
+            rows,_=analyse_video(v,'fixture')
+            self.assertIn('availability_or_payment_conditions',rows[0]['issues'])
     def test_chinese_prices(self):
         for text, cents in [("二百四十七", 24700), ("两百零五", 20500), ("一千零五十", 105000), ("二四七", 24700), ("一百二十点五", 12050), ("247.50", 24750)]:
             self.assertEqual(amount(text), cents)

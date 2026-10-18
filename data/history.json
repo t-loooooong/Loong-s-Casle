@@ -4618,6 +4618,202 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:ea58f624ffe411429a0acf3c",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T10:03:52Z",
+      "observedAt": "2026-10-18T11:56:08.563Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0291/144msa·0011exs高达拼装模型 | ¥103 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：ex x今日贝斯现在103了",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "ex x今日贝斯现在103了",
+            "startSeconds": 1.179,
+            "endSeconds": 3.02,
+            "priceCents": 10300
+          }
+        ]
+      },
+      "correctsObservationIds": [
+        "local-auto:102dbb7d6dc6730fdcaa66e0"
+      ]
+    },
+    {
+      "id": "local-auto:a41826a21379be3339c8b4dc",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "诺贝尔高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T10:03:52Z",
+      "observedAt": "2026-10-18T11:56:08.563Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [
+        {
+          "label": "盒损（画面字幕，需复核）",
+          "priceCents": 7500,
+          "quoteText": "计19小时告丨诺48小时内货,超时必赔盒损是75百亻4惠我拼过·48小时内发货,假一赔十·全场包邮·先用后付",
+          "startSeconds": 6,
+          "page": 1,
+          "reviewRequired": true
+        }
+      ],
+      "evidence": {
+        "text": "万代hghgfc1191/144美少女诺贝尔高达机动武斗 | ¥77 | 0先用后付《支持0元下单,确认收货后再付款 | 条件价字幕（非主价格）：计19小时告丨诺48小时内货,超时必赔盒损是75百亻4惠我拼过·48小时内发货,假一赔十·全场包邮·先用后付 | 字幕：诺贝尔降价77了",
+        "startSeconds": 4,
+        "endSeconds": 7,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          },
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "诺贝尔降价77了",
+            "startSeconds": 4.019,
+            "endSeconds": 5.7,
+            "priceCents": 7700
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:593f7dfeb5b135cce2a41488",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "梅萨F01",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 8500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T10:03:52Z",
+      "observedAt": "2026-10-18T11:56:08.563Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "hguc2331/144闪光的哈萨维梅萨f01高达拼装模型 | ¥85 | 牵先用后付!支持0元下单,确认收货后再付款 | 字幕：梅萨背刺85了",
+        "startSeconds": 11,
+        "endSeconds": 15,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0011.jpg",
+            "seconds": 11
+          },
+          {
+            "file": "frame-0012.jpg",
+            "seconds": 12
+          },
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "梅萨背刺85了",
+            "startSeconds": 10.089,
+            "endSeconds": 11.609,
+            "priceCents": 8500
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -4640,6 +4836,7 @@
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 3
-    }
+    },
+    "lastRuleRepairAt": "2026-10-18T11:56:08.563Z"
   }
 }

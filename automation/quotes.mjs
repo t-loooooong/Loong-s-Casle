@@ -33,6 +33,10 @@ export function appendCandidates(history, candidates, bundle, options={}) {
     const {c,source} = (safe ? pool : hasVisual ? group.filter(({c})=>c.channels?.includes('visual')) : group)[0];
     const model = c.modelCandidates[0];
     const alternatives = safe ? eligible.filter(row => row.c !== c && row.c.priceLabel === '百亿（字幕原称）').map(({c:alt})=>({label:alt.priceLabel,priceCents:alt.priceCents,quoteText:alt.evidence.text,startSeconds:alt.evidence.startSeconds,page:alt.page})) : [];
+    if(safe)for(const {c:row} of group)for(const alt of row.alternativePrices||[]){
+      if(alt.reviewRequired===true&&Number.isSafeInteger(alt.priceCents)&&alt.priceCents>=100&&alt.priceCents<=500000&&alt.priceCents!==c.priceCents)
+        alternatives.push({label:String(alt.label).slice(0,100),priceCents:alt.priceCents,quoteText:String(alt.quoteText).slice(0,1000),startSeconds:alt.startSeconds,page:row.page,reviewRequired:true});
+    }
     const semantic = `${c.bvid}:${c.page}:${c.evidence.startSeconds}:${c.priceCents}:${model.grade}:${model.modelName}`+(hasVisual?JSON.stringify(group.map(({c})=>[c.priceCents,c.channels,c.issues,c.evidence.text])):'');
     const id = `local-auto:${createHash('sha256').update(semantic).digest('hex').slice(0,24)}`;
     if (history.records.some(r => r.id === id)) continue;
@@ -55,9 +59,12 @@ export function appendCandidates(history, candidates, bundle, options={}) {
         cid: source.cid, page: source.page, language: source.language, subtitleKind: source.subtitleKind,
         ...(hasVisual?{channels:dual?['subtitle','visual']:['visual'],visualFrames:group.flatMap(({c})=>c.evidence.visualFrames||[]).filter(f=>/^frame-\d{4}\.jpg$/.test(f.file)&&Number.isFinite(f.seconds)).map(f=>({file:f.file,seconds:f.seconds})).slice(0,12),subtitleEvidence:group.flatMap(({c})=>c.evidence.subtitleEvidence||[]).slice(0,20).map(e=>({text:String(e.text||'').slice(0,1000),startSeconds:e.startSeconds,endSeconds:e.endSeconds,priceCents:e.priceCents}))}:{}) } };
     if(hasVisual){
+      if(safe&&model.modelName==='Ex-S高达'){
+        record.correctsObservationIds=history.records.filter(r=>r.bvid===c.bvid&&r.sourceUid===source.sourceUid&&r.grade===model.grade&&r.modelName==='S高达'&&r.status!=='verified'&&['local_auto_visual','local_auto_dual'].includes(r.extractionMethod)&&r.evidence?.page===c.page&&/ex[-·]?s高达/i.test(String(r.evidence?.text))).map(r=>r.id);
+      }
       record.evidence.text=[...new Set(group.map(({c})=>c.evidence.text))].join(' | ').slice(0,6000);
       record.confidence=safe?(dual?85:70):30;
-      record.notes=`${dual?'字幕／转写与画面联合提取':'画面OCR提取'}，${c.priceLabel||'画面报价'}；${safe?'同一商品主价格区域在至少两张画面重复出现，仍非人工核对。':'条件、币种或字幕金额存在歧义，需人工复核。'}${preservePrice!==null?'保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。':''}历史报价不保证仍可购买。截图仅保留在本机审计目录。`;
+      record.notes=`${dual?'字幕／转写与画面联合提取':'画面OCR提取'}，${c.priceLabel||'画面报价'}；${safe?'同一商品主价格区域在至少两张画面重复出现，仍非人工核对。':'条件、币种或字幕金额存在歧义，需人工复核。'}${preservePrice!==null?'保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。':''}历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。`;
     }
     history.records.push(record); added.push(record);
   }

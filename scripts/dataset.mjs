@@ -51,6 +51,15 @@ export function latestPerVideo(records) {
 }
 // Display-only projection: never remove or rewrite historical observations.
 export function latestPerProduct(records) {
+  // Corrected automatic identities remain in history but must not reappear as
+  // a second product. Never hide manual/human-verified or cross-video records.
+  const byId=new Map(records.map(r=>[r.id,r]));
+  const corrected=new Set();
+  for(const r of records)if(r.status==='extracted'&&r.modelName==='Ex-S高达')for(const id of r.correctsObservationIds||[]){
+    const old=byId.get(id);
+    if(old&&old.modelName==='S高达'&&old.status!=='verified'&&old.sourceUid===r.sourceUid&&old.bvid===r.bvid&&old.grade===r.grade&&old.evidence?.page===r.evidence?.page&&['local_auto_visual','local_auto_dual'].includes(old.extractionMethod))corrected.add(id);
+  }
+  records=records.filter(r=>!corrected.has(r.id));
   const normalize = value => String(value ?? '').normalize('NFKC').trim().replace(/\s+/g, ' ').toLowerCase();
   const baseKey = row => JSON.stringify([['re','re100','re/100'].includes(normalize(row.grade)) ? 're' : normalize(row.grade), normalize(row.modelName)]);
   const scaleOf = row => normalize(row.scale).replace(/\s/g, '');

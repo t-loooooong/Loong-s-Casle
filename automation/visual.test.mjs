@@ -1,15 +1,45 @@
 import test from'node:test';
 import assert from'node:assert/strict';
-import{mkdtemp,rm,readFile}from'node:fs/promises';
+import{mkdtemp,rm,readFile,writeFile,readdir}from'node:fs/promises';
 import{join,dirname}from'node:path';
 import{fileURLToPath}from'node:url';
-import{fuseCandidates}from'./fusion.mjs';
+import{fuseCandidates,extractionCoverage}from'./fusion.mjs';
 import{appendCandidates}from'./quotes.mjs';
 import{collectVisual,publicVideo}from'./visual.mjs';
 const video={bvid:'BV19FJX6QEpk',cid:'42780396563',page:1,title:'re维基纳降价',sourceUid:'382486276',sourceAccount:'test',publishedAt:'2026-10-16T02:25:59.000Z',subtitleText:'维基纳154元',subtitleKind:'bilibili',language:'zh-CN'};
 const bundle={schemaVersion:1,producer:'subbatch-local-auto-v1',exportedAt:'2026-10-16T03:00:00Z',videos:[video],collection:{ok:true}};
 const sub={bvid:video.bvid,page:1,sourceUid:video.sourceUid,priceCents:15400,currency:'CNY',priceType:'observed',issues:[],modelCandidates:[{grade:'RE/100',modelName:'维基纳'}],modelMatch:{method:'title_catalog_alias'},evidence:{text:'维基纳154元',startSeconds:2,endSeconds:4}};
 const pic={...sub,channels:['visual'],priceLabel:'画面拼单价',modelMatch:{method:'screen_title_catalog'},evidence:{text:'万代RE/100维基纳 | ¥154',startSeconds:1,endSeconds:4,visualFrames:[{file:'frame-0001.jpg',seconds:1},{file:'frame-0004.jpg',seconds:4}]}};
+test('an explicit stable screen variant resolves a generic subtitle but not price conflicts',()=>{
+ const generic={...sub,issues:['model_variant_needs_review','implicit_cny_unit']};
+ const confirmed={...pic,modelMatch:{method:'screen_title_catalog',variantConfirmed:true}};
+ const fused=fuseCandidates([generic],[confirmed]);assert.deepEqual(fused[0].issues,[]);
+ assert.ok(fuseCandidates([generic],[pic])[0].issues.includes('model_variant_needs_review'));
+ assert.ok(fuseCandidates([{...generic,priceCents:15000}],[confirmed])[0].issues.includes('subtitle_screen_conflict'));
+});
+test('normal main price and a separate conditional amount are retained independently',()=>{
+ const candidate={...pic,alternativePrices:[{label:'盒损（画面字幕，需复核）',priceCents:15000,quoteText:'盒损是150',reviewRequired:true,startSeconds:3}]};
+ const h={records:[],meta:{}};appendCandidates(h,fuseCandidates([sub],[candidate]),bundle);
+ assert.equal(h.records[0].priceCents,15400);assert.equal(h.records[0].status,'extracted');
+ assert.equal(h.records[0].alternativePrices[0].priceCents,15000);assert.equal(h.records[0].alternativePrices[0].reviewRequired,true);
+});
+test('coverage reports unassigned price evidence rather than claiming perfect recall',()=>{
+ const report=extractionCoverage([sub,{...sub,modelCandidates:[]}],[pic]);
+ assert.equal(report.unassignedSubtitleQuotes,1);assert.equal(report.unassignedParts[0],video.bvid+':P1');
+});
+test('stale successful cache is refreshed once after parser updates, then reused',async()=>{
+ const root=await mkdtemp(join(dirname(fileURLToPath(import.meta.url)),'.visual-test-'));let calls=0;
+ try{
+  const analyze=async()=>({ok:true,at:String(++calls),candidates:[pic]});
+  await collectVisual(bundle,{root,catalog:'unused',analyze,log(){}});
+  const key=(await readdir(root)).find(n=>/^[a-f0-9]{24}$/.test(n));
+  const file=join(root,key,'result.json'),cache=JSON.parse(await readFile(file));delete cache.parserFingerprint;
+  await writeFile(file,JSON.stringify(cache));
+  const refreshed=await collectVisual(bundle,{root,catalog:'unused',analyze,log(){}});
+  assert.equal(calls,2);assert.equal(refreshed.summary.refreshPending,0);
+  await collectVisual(bundle,{root,catalog:'unused',analyze,log(){}});assert.equal(calls,2);
+ }finally{await rm(root,{recursive:true,force:true});}
+});
 test('matching timed visual and subtitle evidence becomes extracted, never human verified',()=>{
  const fused=fuseCandidates([sub],[pic]);assert.equal(fused.length,1);assert.deepEqual(fused[0].channels,['subtitle','visual']);
  const history={records:[],meta:{}};appendCandidates(history,fused,bundle,{observedAt:'2026-10-18T00:00:00Z',visualSummary:{status:'complete',checkedParts:1,totalParts:1}});

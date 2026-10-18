@@ -1,4 +1,8 @@
 const key=c=>JSON.stringify([c.bvid,c.page,c.modelCandidates?.[0]?.grade,c.modelCandidates?.[0]?.modelName]);
+export function extractionCoverage(subtitles,visuals){
+  const unresolved=subtitles.filter(c=>c.modelCandidates?.length!==1);
+  return {subtitleQuotes:subtitles.length,visualQuotes:visuals.length,unassignedSubtitleQuotes:unresolved.length,unassignedParts:[...new Set(unresolved.map(c=>`${c.bvid}:P${c.page}`))]};
+}
 function near(a,b){
   const x=a.evidence?.startSeconds,y=a.evidence?.endSeconds??x,u=b.evidence?.startSeconds,v=b.evidence?.endSeconds??u;
   return [x,y,u,v].every(Number.isFinite)&&x<=v+3&&u<=y+3;
@@ -13,7 +17,7 @@ export function fuseCandidates(subtitles,visuals){
     const conflict=current.some(c=>c.priceCents!==picture.priceCents||c.currency!=='CNY');
     const channels=peers.length?['subtitle','visual']:['visual'];
     const issues=[...new Set([...(picture.issues||[]),...(conflict?['subtitle_screen_conflict']:[])])];
-    if(match)issues.push(...match.issues.filter(issue=>issue!=='implicit_cny_unit'&&issue!=='multiple_prices'));
+    if(match)issues.push(...match.issues.filter(issue=>issue!=='implicit_cny_unit'&&issue!=='multiple_prices'&&!(issue==='model_variant_needs_review'&&picture.modelMatch?.variantConfirmed===true)));
     // A subtitle price under ambiguous box/deposit conditions must not silently validate a screen amount.
     if(!match&&peers.length&&!current.length)issues.push('subtitle_conditions_need_review');
     const fused={...picture,channels,issues:[...new Set(issues)],evidence:{...picture.evidence,
