@@ -3302,6 +3302,246 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:23c929a0d75a8783b5950c6a",
+      "bvid": "BV1jCpC6GEin",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森降价，hg水扎古、德尔塔plus、加撒c、格雷兹艾因、x分裂者、rg零号机背刺p2白嫖券后你可考虑，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jCpC6GEin/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10500,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-14T06:57:59.000Z",
+      "observedAt": "2026-10-18T07:15:44.683Z",
+      "notes": "字幕／转写与画面联合提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [
+        {
+          "label": "百亿（字幕原称）",
+          "priceCents": 10000,
+          "quoteText": "格莱森降价105了 百亿是100啊",
+          "startSeconds": 12.14,
+          "page": 1
+        }
+      ],
+      "evidence": {
+        "text": "格莱森降价105了 百亿是100啊 | 〖万代]hguc1721/144am×·009德莱森大魔zz版拼 | 券后¥105券前¥106> | 满20减1 | 字幕：格莱森降价105了",
+        "startSeconds": 13,
+        "endSeconds": 15,
+        "cid": "42730982748",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "格莱森降价105了",
+            "startSeconds": 12.14,
+            "endSeconds": 13.74,
+            "priceCents": 10500
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:7d292fab2df3d84a9fc971c3",
+      "bvid": "BV1jCpC6GEin",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森降价，hg水扎古、德尔塔plus、加撒c、格雷兹艾因、x分裂者、rg零号机背刺p2白嫖券后你可考虑，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jCpC6GEin/",
+      "modelName": "格雷兹艾因",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5600,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-14T06:57:59.000Z",
+      "observedAt": "2026-10-18T07:15:44.683Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hg0181/144格雷兹艾因铁血孤儿团旧0拼装 | ¥56 | ,后天达《最后1件,现在下单后天达,超时必赔3元券 | 字幕：爱因背刺56了",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42730982748",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "爱因背刺56了",
+            "startSeconds": 1.3,
+            "endSeconds": 2.74,
+            "priceCents": 5600
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:5a408cc8262f1b1f4273f100",
+      "bvid": "BV1jCpC6GEin",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森降价，hg水扎古、德尔塔plus、加撒c、格雷兹艾因、x分裂者、rg零号机背刺p2白嫖券后你可考虑，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jCpC6GEin/",
+      "modelName": "零号机",
+      "grade": "RG",
+      "scale": null,
+      "priceCents": 14700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-14T06:57:59.000Z",
+      "observedAt": "2026-10-18T07:15:44.683Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]rgeva新福音战士零号机0号机普通版拼装模 | ¥147 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：持续的降0号机背刺147了",
+        "startSeconds": 6,
+        "endSeconds": 8,
+        "cid": "42730982748",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          },
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "持续的降0号机背刺147了",
+            "startSeconds": 5.059,
+            "endSeconds": 7.83,
+            "priceCents": 14700
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:6d6704f480986f93dcf53eac",
+      "bvid": "BV1jCpC6GEin",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森降价，hg水扎古、德尔塔plus、加撒c、格雷兹艾因、x分裂者、rg零号机背刺p2白嫖券后你可考虑，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jCpC6GEin/",
+      "modelName": "加撒C",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6200,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-14T06:57:59.000Z",
+      "observedAt": "2026-10-18T07:15:44.683Z",
+      "notes": "画面OCR提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]hguc063加萨c量产型am×·003加撒c拼装 | 券后¥62券前¥63〉 | 满20减1",
+        "startSeconds": 18,
+        "endSeconds": 23,
+        "cid": "42730982748",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0019.jpg",
+            "seconds": 19
+          },
+          {
+            "file": "frame-0020.jpg",
+            "seconds": 20
+          },
+          {
+            "file": "frame-0021.jpg",
+            "seconds": 21
+          },
+          {
+            "file": "frame-0022.jpg",
+            "seconds": 22
+          },
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -3319,9 +3559,9 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 32,
+      "checkedParts": 33,
       "totalParts": 47,
-      "failedParts": 4,
+      "failedParts": 5,
       "revision": "visual-2026-10-18.1"
     }
   }
