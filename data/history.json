@@ -1816,6 +1816,358 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:d3ca4af0289f0a1457f33a8d",
+      "bvid": "BV1eVJB62EHK",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "shf西索、mg维达尔、蓝魔蟹、hg德莱森、g战机套、exs、实验魔蟹、异端审判、盒损（mg马克贝老虎、骁骑）背刺，hg海涅命运降价，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1eVJB62EHK/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10100,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-17T15:18:14.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "德莱森背刺101了 百亿是100 | 〖万代]hguc1741/144am×.009德莱森高达zz | 9.4折¥1008 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：德莱森背刺101了",
+        "startSeconds": 8,
+        "endSeconds": 10,
+        "cid": "42826074026",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          },
+          {
+            "file": "frame-0009.jpg",
+            "seconds": 9
+          },
+          {
+            "file": "frame-0010.jpg",
+            "seconds": 10
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "德莱森背刺101了",
+            "startSeconds": 7.15,
+            "endSeconds": 9.089,
+            "priceCents": 10100
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:319e80b93c1fd90461833305",
+      "bvid": "BV1VNJe6iEqG",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森、g战机套、exs、p2 re维基纳背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1VNJe6iEqG/",
+      "modelName": "维基纳",
+      "grade": "RE/100",
+      "scale": null,
+      "priceCents": 14800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T08:53:47.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "维基纳贝斯148了还在加",
+        "startSeconds": 0.06,
+        "endSeconds": 2.439,
+        "cid": "42818732932",
+        "page": 2,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:572eda4146fc268f485a289c",
+      "bvid": "BV1JeJe62EBg",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "盒损（rg初号机、二号机、mg战蟹、、马格南、空降百式、hg路西法、风暴海因德里、迦巴卡利、伊芙利特、重装传令骑兵、德莱森、g战机套）背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1JeJe62EBg/",
+      "modelName": "路西法",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T07:17:15.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "候选金额 86 元，待复核：availability_or_payment_conditions、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "核损的路西法背刺86了",
+        "startSeconds": 0.04,
+        "endSeconds": 1.919,
+        "cid": "42814343511",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:fad85a1e38529f9ac716e21d",
+      "bvid": "BV1JeJe62EBg",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "盒损（rg初号机、二号机、mg战蟹、、马格南、空降百式、hg路西法、风暴海因德里、迦巴卡利、伊芙利特、重装传令骑兵、德莱森、g战机套）背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1JeJe62EBg/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T07:17:15.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "候选金额 49 元，待复核：availability_or_payment_conditions、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "其实核损的加巴卡利贝茨49了",
+        "startSeconds": 13.179,
+        "endSeconds": 15.74,
+        "cid": "42814343511",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:e3132f91cf7e76298df8e600",
+      "bvid": "BV1JeJe62EBg",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "盒损（rg初号机、二号机、mg战蟹、、马格南、空降百式、hg路西法、风暴海因德里、迦巴卡利、伊芙利特、重装传令骑兵、德莱森、g战机套）背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1JeJe62EBg/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T07:17:15.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "候选金额 96 元，待复核：availability_or_payment_conditions、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "核损的德莱森贝茨96了",
+        "startSeconds": 16.64,
+        "endSeconds": 18.8,
+        "cid": "42814343511",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:2c9ebd60e81eaadfea1bedec",
+      "bvid": "BV1AMJv6WE9o",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg异端审判改、水扎古、强袭杰刚、海军勇士背刺，hg龙飞、shf30周年迪迦降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1AMJv6WE9o/",
+      "modelName": "水扎古",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T07:08:44.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "水扎古背刺67了",
+        "startSeconds": 1.34,
+        "endSeconds": 2.94,
+        "cid": "42814146959",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:3329d2d5060ac2d28dbb649f",
+      "bvid": "BV1AMJv6WE9o",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg异端审判改、水扎古、强袭杰刚、海军勇士背刺，hg龙飞、shf30周年迪迦降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1AMJv6WE9o/",
+      "modelName": "海军勇士",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T07:08:44.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "海军勇士背刺53了",
+        "startSeconds": 14.38,
+        "endSeconds": 16.3,
+        "cid": "42814146959",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:456f81df690a73ae838d9f12",
+      "bvid": "BV1G3nM68EMy",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "bc无限正义二式、gq、武者、非凡、骑士、rg初号机、hg s高达背刺，mg百式、超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1G3nM68EMy/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6900,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T01:49:17.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]hguc023msa·0011s高达1/144拼装模型机 | ¥69 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：S高达背刺现在69了",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42834133045",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "S高达背刺现在69了",
+            "startSeconds": 1.439,
+            "endSeconds": 3.299,
+            "priceCents": 6900
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:768a1f85ea3d8e84064df518",
+      "bvid": "BV1eVJB62EHK",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "shf西索、mg维达尔、蓝魔蟹、hg德莱森、g战机套、exs、实验魔蟹、异端审判、盒损（mg马克贝老虎、骁骑）背刺，hg海涅命运降价，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1eVJB62EHK/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T15:18:14.000Z",
+      "observedAt": "2026-10-18T07:04:47.471Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc机动战士高达029ex-s高达拼装模型 | ¥107 | 0先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 23,
+        "endSeconds": 27,
+        "cid": "42826074026",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          },
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          },
+          {
+            "file": "frame-0027.jpg",
+            "seconds": 27
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -1823,8 +2175,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T07:03:36.840Z",
-    "lastLocalImportParts": 33,
+    "lastLocalImportAt": "2026-10-18T07:04:06.199Z",
+    "lastLocalImportParts": 36,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-18T07:02:51.701Z",
@@ -1833,8 +2185,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 1,
-      "totalParts": 33,
+      "checkedParts": 3,
+      "totalParts": 36,
       "failedParts": 1,
       "revision": "visual-2026-10-18.1"
     }
