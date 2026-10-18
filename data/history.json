@@ -2944,6 +2944,246 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:ae4b85b9f0218cabe9a8d961",
+      "bvid": "BV18aJy6ZEoX",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg空降百式、hg卡尔玛、路西法、高战蟹、海盗、海兹尔二号机背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18aJy6ZEoX/",
+      "modelName": "路西法",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 8900,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-15T10:44:17.000Z",
+      "observedAt": "2026-10-18T07:11:27.524Z",
+      "notes": "字幕／转写与画面联合提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [
+        {
+          "label": "百亿（字幕原称）",
+          "priceCents": 8700,
+          "quoteText": "路西法背刺89了 百亿八十七",
+          "startSeconds": 11.25,
+          "page": 1
+        }
+      ],
+      "evidence": {
+        "text": "路西法背刺89了 百亿八十七 | 现货万代hg1/144g复国运动g·路西法天魔高达高达 | 0券后¥89券前¥90> | 满10减1 | 字幕：路西法背刺89了",
+        "startSeconds": 12,
+        "endSeconds": 13,
+        "cid": "42765648222",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0012.jpg",
+            "seconds": 12
+          },
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "路西法背刺89了",
+            "startSeconds": 11.25,
+            "endSeconds": 13.05,
+            "priceCents": 8900
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:9a2376943f1fa83fab6e1dc4",
+      "bvid": "BV18aJy6ZEoX",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg空降百式、hg卡尔玛、路西法、高战蟹、海盗、海兹尔二号机背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18aJy6ZEoX/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7200,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-15T10:44:17.000Z",
+      "observedAt": "2026-10-18T07:11:27.524Z",
+      "notes": "字幕／转写与画面联合提取，画面券后价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc1871/144海盗高达×·1骷髅高达拼装现货 | 0券后¥72券前¥73〉 | 满20减1 | 字幕：海盗背刺72了",
+        "startSeconds": 0,
+        "endSeconds": 4,
+        "cid": "42765648222",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "海盗背刺72了",
+            "startSeconds": 1.34,
+            "endSeconds": 2.62,
+            "priceCents": 7200
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:0a405dd4ade5966a3671b6ad",
+      "bvid": "BV18aJy6ZEoX",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg空降百式、hg卡尔玛、路西法、高战蟹、海盗、海兹尔二号机背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18aJy6ZEoX/",
+      "modelName": "卡尔玛扎古",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-15T10:44:17.000Z",
+      "observedAt": "2026-10-18T07:11:27.524Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代59156hguc034卡尔玛指挥官扎古ms-06fs | ¥54 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：卡尔玛扎古背刺54了",
+        "startSeconds": 14,
+        "endSeconds": 16,
+        "cid": "42765648222",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          },
+          {
+            "file": "frame-0016.jpg",
+            "seconds": 16
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "卡尔玛扎古背刺54了",
+            "startSeconds": 14.07,
+            "endSeconds": 15.83,
+            "priceCents": 5400
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:f1f88ba795bf213c4fa233af",
+      "bvid": "BV18aJy6ZEoX",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg空降百式、hg卡尔玛、路西法、高战蟹、海盗、海兹尔二号机背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18aJy6ZEoX/",
+      "modelName": "高战蟹",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-15T10:44:17.000Z",
+      "observedAt": "2026-10-18T07:11:27.524Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代现货hguc0371/144高战蟹魔蟹蓝色高达拼装 | ¥58 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 17,
+        "endSeconds": 22,
+        "cid": "42765648222",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          },
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0019.jpg",
+            "seconds": 19
+          },
+          {
+            "file": "frame-0020.jpg",
+            "seconds": 20
+          },
+          {
+            "file": "frame-0021.jpg",
+            "seconds": 21
+          },
+          {
+            "file": "frame-0022.jpg",
+            "seconds": 22
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -2961,9 +3201,9 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 21,
+      "checkedParts": 22,
       "totalParts": 47,
-      "failedParts": 3,
+      "failedParts": 4,
       "revision": "visual-2026-10-18.1"
     }
   }
