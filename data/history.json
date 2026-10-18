@@ -4210,6 +4210,122 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:c5096e8cb0dd7f4f082939d8",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "诺贝尔高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T10:03:52.000Z",
+      "observedAt": "2026-10-18T11:17:51.446Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hghgfc1191/144美少女诺贝尔高达机动武斗 | ¥77 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：诺贝尔降价77了",
+        "startSeconds": 4,
+        "endSeconds": 7,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          },
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "诺贝尔降价77了",
+            "startSeconds": 4.019,
+            "endSeconds": 5.7,
+            "priceCents": 7700
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:fb667eb26b88dbd419729a4b",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "德尔塔Plus",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-18T10:03:52.000Z",
+      "observedAt": "2026-10-18T11:17:51.446Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货速发万代hguc1151/144deltaplus德尔塔百式 | ¥90 | 0先用后付丨支持0元下单,确认收货后再付款 | 字幕：核损是七十五百一十七十四plus背刺90了",
+        "startSeconds": 8,
+        "endSeconds": 10,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          },
+          {
+            "file": "frame-0009.jpg",
+            "seconds": 9
+          },
+          {
+            "file": "frame-0010.jpg",
+            "seconds": 10
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "核损是七十五百一十七十四plus背刺90了",
+            "startSeconds": 5.7,
+            "endSeconds": 9.33,
+            "priceCents": 9000
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -4230,7 +4346,8 @@
       "checkedParts": 43,
       "totalParts": 48,
       "failedParts": 5,
-      "revision": "visual-2026-10-18.1"
+      "revision": "visual-2026-10-18.1",
+      "refreshPending": 41
     }
   }
 }
