@@ -3250,6 +3250,58 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:4c4db63f9d0fb82d85f14f82",
+      "bvid": "BV1MHp16PELF",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "抖音双十一券一般，pb成品是明天下午五点！hg扎克艾因降价，hg路西法、gp03背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1MHp16PELF/",
+      "modelName": "路西法",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-14T11:28:13.000Z",
+      "observedAt": "2026-10-18T07:15:18.398Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hg1/144g复国路西法高达拼装模型 | ¥90 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：路西法背刺90了",
+        "startSeconds": 44,
+        "endSeconds": 45,
+        "cid": "42738191904",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0044.jpg",
+            "seconds": 44
+          },
+          {
+            "file": "frame-0045.jpg",
+            "seconds": 45
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "路西法背刺90了",
+            "startSeconds": 43.17,
+            "endSeconds": 44.99,
+            "priceCents": 9000
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -3267,7 +3319,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 30,
+      "checkedParts": 32,
       "totalParts": 47,
       "failedParts": 4,
       "revision": "visual-2026-10-18.1"
