@@ -3201,7 +3201,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 22,
+      "checkedParts": 24,
       "totalParts": 47,
       "failedParts": 4,
       "revision": "visual-2026-10-18.1"
