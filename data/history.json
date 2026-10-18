@@ -4382,6 +4382,58 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:bf0590556e7266d79582bdf2",
+      "bvid": "BV1vMng6gEB2",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg黑卡碧尼、七号机、gp03、exs、海军勇士、德莱森、迦巴卡利、德尔塔plus背刺，hg扎克艾因降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1vMng6gEB2/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-18T06:38:13.000Z",
+      "observedAt": "2026-10-18T11:48:20.027Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0291/144msa·0011exs高达拼装模型 | ¥104 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42840360006",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -4403,7 +4455,7 @@
       "totalParts": 48,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 0
+      "refreshPending": 42
     }
   }
 }
