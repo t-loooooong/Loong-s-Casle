@@ -1,5 +1,31 @@
 {
   "schemaVersion": 1,
-  "products": [],
-  "attempts": {}
+  "products": [
+    {
+      "id": "official-cn-3059",
+      "grade": "HG",
+      "modelNames": [
+        "诺贝尔高达"
+      ],
+      "scale": "1/144",
+      "allowUnknownScale": true,
+      "image": {
+        "url": "https://staticcdn.bandaihobbysite.cn/www/uploads/20250612/63d1b341d69f015715d3d1f84d7affb6.jpg",
+        "alt": "HGFC 1/144 诺贝尔高达",
+        "sourceUrl": "https://bandaihobbysite.cn/index/index/detail/id/3059",
+        "sourceName": "BANDAI HOBBY SITE（中国内地）",
+        "credit": "图片来源：万代官方商品资料；版权归各权利人所有",
+        "caption": "官方参考图，非卖家实拍",
+        "note": "参考商品：HGFC 1/144 诺贝尔高达；报价具体版本及盒况以原视频和卖家信息为准。"
+      }
+    }
+  ],
+  "attempts": {
+    "[\"HG\",\"诺贝尔高达\"]": "2026-10-18T12:13:34.363Z",
+    "[\"HG\",\"Ex-S高达\"]": "2026-10-18T12:13:34.363Z",
+    "[\"HG\",\"梅萨F01\"]": "2026-10-18T12:13:34.363Z",
+    "[\"HG\",\"海涅命运新生版\"]": "2026-10-18T12:13:34.363Z",
+    "[\"MB\",\"神高达\"]": "2026-10-18T12:13:34.363Z",
+    "[\"MG\",\"红异端改\"]": "2026-10-18T12:13:34.363Z"
+  }
 }
