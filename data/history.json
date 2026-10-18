@@ -4326,6 +4326,62 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:60ccce543101dd4fa36f0972",
+      "bvid": "BV1jCpC6GEin",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森降价，hg水扎古、德尔塔plus、加撒c、格雷兹艾因、x分裂者、rg零号机背刺p2白嫖券后你可考虑，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jCpC6GEin/",
+      "modelName": "德尔塔Plus",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9500,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-14T06:57:59.000Z",
+      "observedAt": "2026-10-18T11:22:41.532Z",
+      "notes": "字幕／转写与画面联合提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]1/144hguc115德尔塔普拉斯deltaplus百式 | 0券后¥95券前¥96〉 | 满20减1 | 字幕：看最后能到多少plus 背刺95了",
+        "startSeconds": 10,
+        "endSeconds": 12,
+        "cid": "42730982748",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0010.jpg",
+            "seconds": 10
+          },
+          {
+            "file": "frame-0011.jpg",
+            "seconds": 11
+          },
+          {
+            "file": "frame-0012.jpg",
+            "seconds": 12
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "看最后能到多少plus 背刺95了",
+            "startSeconds": 7.83,
+            "endSeconds": 10.71,
+            "priceCents": 9500
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -4347,7 +4403,7 @@
       "totalParts": 48,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 11
+      "refreshPending": 9
     }
   }
 }
