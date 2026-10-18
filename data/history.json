@@ -2963,7 +2963,7 @@
       "status": "partial",
       "checkedParts": 21,
       "totalParts": 47,
-      "failedParts": 1,
+      "failedParts": 3,
       "revision": "visual-2026-10-18.1"
     }
   }
