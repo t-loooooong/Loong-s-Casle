@@ -27,6 +27,7 @@ test('page integration: two parts, failed final export, persisted resume without
     await elements['#run'].onclick();
     assert.equal(contentCalls,2);assert.equal(stored.scanComplete,true);assert.ok(stored.lastSuccessAt);
     assert.equal(exported.at(-1).collection.ok,true);assert.equal(exported.at(-1).videos.length,2);
+    assert.equal(exported.at(-1).visualTasks.length,2);
   } finally {
     globalThis.chrome=original.chrome;globalThis.document=original.document;globalThis.setInterval=original.interval;
     if(original.navigator)Object.defineProperty(globalThis,'navigator',original.navigator);else delete globalThis.navigator;

@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 export const MANUAL_PRODUCER = 'gunpla-manual-v1';
 export const emptyManual = () => ({schemaVersion:1,products:[],images:[],receipts:[]});
 export const canonicalGrade = grade => ['RE','RE100','RE/100'].includes(grade) ? 'RE/100' : grade;
-const grades = new Set(['HG','RG','MG','MGSD','MGEX','PG','PGU','EG','SD','RE/100','FM','OTHER']);
+const grades = new Set(['HG','RG','MG','MGSD','MGEX','PG','PGU','EG','SD','RE/100','FM','MB','OTHER']);
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 export const imagePath = value => typeof value === 'string' && /^\/uploads\/[a-f0-9]{64}\.jpg$/.test(value);
 function text(value,max,required=false) {

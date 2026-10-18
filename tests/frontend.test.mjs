@@ -182,3 +182,9 @@ test('manual image flags do not allow arbitrary or protocol-relative image URLs'
     assert.doesNotMatch(p.element('#price-rows').innerHTML,/class="product-photo"/);
   }
 });
+test('dual-channel evidence is explicit, escaped, and not labelled human verified',async()=>{
+ const p=await page({records:[{...records[0],grade:'MB',status:'extracted',extractionMethod:'local_auto_dual',evidence:{page:1,startSeconds:6,text:'<b>screen 1314</b> | 字幕1314'}}],meta:{visualCollection:{status:'blocked',checkedParts:1,totalParts:3}}});
+ assert.match(p.element('#price-rows').innerHTML,/字幕＋画面证据/);assert.match(p.element('#price-rows').innerHTML,/&lt;b&gt;/);assert.match(p.element('#price-rows').innerHTML,/截图保存在本机/);
+ assert.match(p.element('#grade').innerHTML,/value="MB"/);assert.match(p.element('#update-note').textContent,/画面OCR 1\/3分P.*访问受限/);
+ assert.equal(p.element('#metric-verified').textContent,0);
+});

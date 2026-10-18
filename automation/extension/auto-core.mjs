@@ -24,9 +24,15 @@ export function videoRecord(info, part, result, now = new Date()) {
     subtitleKind: result.subtitleKind, language: result.language, collectedAt: now.toISOString() };
 }
 export const taskKey = (bvid, part) => `${bvid}:${part.cid}`;
+export function visualTask(info, part, now = new Date()) {
+  const row=videoRecord(info,part,{subtitleText:'discovery-placeholder',subtitleKind:'unavailable',language:'unknown'},now);
+  const {subtitleText,subtitleKind,language,...task}=row;
+  return task;
+}
 export function cleanBundle(state) {
   // Explicit whitelist. Never serialize runtime replies, cookie storage, or track/audio URLs.
   return { schemaVersion: 1, producer: 'subbatch-local-auto-v1', exportedAt: new Date().toISOString(),
+    visualTasks: Object.values(state.visualTasks || {}).map(v=>({bvid:v.bvid,cid:v.cid,page:v.page,title:v.title,part:v.part,sourceUid:v.sourceUid,sourceAccount:v.sourceAccount,publishedAt:v.publishedAt,videoUrl:v.videoUrl,collectedAt:v.collectedAt})),
     videos: Object.values(state.videos || {}).map(v => ({ bvid:v.bvid, cid:v.cid, page:v.page, part:v.part, title:v.title,
       sourceUid:v.sourceUid, sourceAccount:v.sourceAccount, publishedAt:v.publishedAt, videoUrl:v.videoUrl,
       subtitleText:v.subtitleText, subtitleKind:v.subtitleKind, language:v.language, collectedAt:v.collectedAt })),

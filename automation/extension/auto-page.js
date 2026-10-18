@@ -1,4 +1,4 @@
-import { UID, day, due, partsOf, videoRecord, taskKey, cleanBundle } from './auto-core.mjs';
+import { UID, day, due, partsOf, videoRecord, visualTask, taskKey, cleanBundle } from './auto-core.mjs';
 const KEY = 'gunplaAutoV1', out = document.querySelector('#status');
 let state = (await chrome.storage.local.get(KEY))[KEY] || { videos: {}, done: {}, paused: false };
 let busy = false, pauseRequested = false;
@@ -57,6 +57,8 @@ async function collect(manual = false) {
       for (const [key, video] of Object.entries(state.videos)) {
         if (Date.parse(video.publishedAt) < Date.now()-30*86400000) { delete state.videos[key]; delete state.done[key]; }
       }
+      state.visualTasks ||= {};
+      for(const [key,task]of Object.entries(state.visualTasks))if(Date.parse(task.publishedAt)<Date.now()-30*86400000)delete state.visualTasks[key];
       state.paused = false; state.scanComplete = false; state.attemptedAt = new Date().toISOString();
       state.publicMessage = '采集中'; await save();
       try {
@@ -74,6 +76,8 @@ async function collect(manual = false) {
             const info = await request('fetchBilibiliInfo', { videoId: row.bvid });
             for (const part of partsOf(info)) {
               const key = taskKey(info.bvid, part);
+              state.visualTasks[key]=visualTask(info,part);
+              await save();
               if (state.done[key]) continue;
               if (pauseRequested) throw Error('用户暂停；下次从断点继续');
               if (++parts > 30) throw Error('达到每轮30个分P上限，请点击继续补采');

@@ -1,4 +1,6 @@
 {
   "downloadsRelative": "Desktop/SubBatchAuto",
-  "parserRevision": "title-catalog-2026-10-16.1"
+  "parserRevision": "dual-channel-2026-10-18.1",
+  "visualEnabled": true,
+  "visualPartsPerCycle": 2
 }

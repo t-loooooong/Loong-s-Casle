@@ -90,8 +90,8 @@ test('build copies only manual image paths and never bundles local credentials',
 });
 
 test('isolated static build includes uploaded asset and manual row without changing history',async()=>{
-  const directory=await mkdtemp(join(tmpdir(),'gunpla-manual-build-'));
   const root=fileURLToPath(new URL('../',import.meta.url));
+  const directory=await mkdtemp(join(root,'.test-manual-build-'));
   try{
     for(const name of ['scripts','config'])await cp(join(root,name),join(directory,name),{recursive:true});
     for(const name of ['data','uploads','automation'])await mkdir(join(directory,name));

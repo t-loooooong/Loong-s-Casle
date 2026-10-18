@@ -1,4 +1,4 @@
-const gradeOrder = ["HG", "RG", "MG", "MGSD", "MGEX", "PG", "PGU", "EG", "SD", "RE", "FM", "OTHER"];
+const gradeOrder = ["HG", "RG", "MG", "MGSD", "MGEX", "PG", "PGU", "EG", "SD", "RE", "FM", "MB", "OTHER"];
 const displayGrade = (grade) => ["RE/100", "RE100", "RE"].includes(grade) ? "RE" : grade;
 
 const state = { quotes: [], filtered: [], meta: {}, sort: { key: "date", direction: "desc" } };
@@ -73,7 +73,7 @@ function render() {
       <td><span class="price ${item.priceCents == null ? "price--pending" : ""}">${money(item.priceCents)}</span>${item.priceType === "coupon" && item.priceCents != null ? '<span class="coupon">券后</span>' : ""}${(item.alternativePrices || []).map(alt => `<small class="quote-alternative">${escapeHtml(alt.label)} ${money(alt.priceCents)}</small>`).join("")}</td>
       <td><span title="${escapeHtml(item.notes)}" class="status status--${item.status === "verified" ? "verified" : item.manual ? "manual" : "pending"}">${statusLabels[item.status] || "待复核"}</span></td>
       <td class="date">${date(item.publishedAt)}</td>
-      <td>${item.manual ? `<span class="manual-source">站长手动添加 · 非视频采集</span>${safeSource(item.sourceUrl)?`<br><a class="source" href="${escapeHtml(safeSource(item.sourceUrl))}" target="_blank" rel="noreferrer">查看商品来源 ↗</a>`:''}<p class="manual-notes">${escapeHtml(item.notes)}</p>` : `<a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>`}${["subtitle_title_crosscheck", "local_auto_subtitle"].includes(item.extractionMethod) ? `<details class="quote-evidence"><summary>字幕依据 · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>字幕或本地转写提取，未核对原视频画面。</small></details>` : ""}</td>
+      <td>${item.manual ? `<span class="manual-source">站长手动添加 · 非视频采集</span>${safeSource(item.sourceUrl)?`<br><a class="source" href="${escapeHtml(safeSource(item.sourceUrl))}" target="_blank" rel="noreferrer">查看商品来源 ↗</a>`:''}<p class="manual-notes">${escapeHtml(item.notes)}</p>` : `<a class="source" href="${escapeHtml(item.videoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.videoTitle)}</a>`}${["subtitle_title_crosscheck", "local_auto_subtitle", "local_auto_dual", "local_auto_visual"].includes(item.extractionMethod) ? `<details class="quote-evidence"><summary>${item.extractionMethod==='local_auto_dual'?'字幕＋画面证据':item.extractionMethod==='local_auto_visual'?'画面OCR证据':'字幕依据'} · P${Number(item.evidence?.page || 1)} · ${Number(item.evidence?.startSeconds || 0).toFixed(1)}秒</summary><p>${escapeHtml(item.evidence?.text)}</p><p>${escapeHtml(item.notes)}</p><small>${['local_auto_dual','local_auto_visual'].includes(item.extractionMethod)?'本机OCR自动提取，未人工核对；截图保存在本机 state/visual。':'字幕或本地转写提取，未核对原视频画面。'}</small></details>` : ""}</td>
     </tr>`).join("") : '<tr><td colspan="6" class="empty">没有匹配的型号，请清除筛选条件后重试。</td></tr>';
 
   els.total.textContent = state.quotes.length;
@@ -113,6 +113,11 @@ async function load() {
       if (state.meta.check?.ok === false) els.note.textContent += " · 云端接口采集仍失败";
     }
     if(state.meta.imageCoverage)els.note.textContent+=` · 商品图 ${Number(state.meta.imageCoverage.withImage)}/${Number(state.meta.imageCoverage.total)}`;
+    if(state.meta.visualCollection){
+      const visual=state.meta.visualCollection;
+      const labels={complete:'本轮检查完成',queued:'排队处理中',partial:'部分失败',blocked:'访问受限，已暂停',cache_full:'本机截图缓存已满',disabled:'已关闭'};
+      els.note.textContent+=` · 画面OCR ${Number(visual.checkedParts||0)}/${Number(visual.totalParts||0)}分P（${labels[visual.status]||'尚未完成'}）`;
+    }
   } catch (error) {
     console.error(error);
     els.rows.innerHTML = '<tr><td colspan="6" class="empty">价格文件暂时不可用，请稍后刷新。</td></tr>';
