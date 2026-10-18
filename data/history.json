@@ -4128,6 +4128,88 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:39c3167d144153380345d191",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "德尔塔Plus",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-18T10:03:52.000Z",
+      "observedAt": "2026-10-18T10:18:09.506Z",
+      "notes": "候选金额 90 元，待复核：availability_or_payment_conditions、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "核损是七十五百一十七十四plus背刺90了",
+        "startSeconds": 5.7,
+        "endSeconds": 9.33,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:102dbb7d6dc6730fdcaa66e0",
+      "bvid": "BV1junG67Eup",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg梅萨、exs、德尔塔plus背刺，hg诺贝尔降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1junG67Eup/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-18T10:03:52.000Z",
+      "observedAt": "2026-10-18T10:18:09.506Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0291/144msa·0011exs高达拼装模型 | ¥103 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42845339769",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -4135,18 +4217,18 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T07:06:17.664Z",
-    "lastLocalImportParts": 47,
+    "lastLocalImportAt": "2026-10-18T10:17:56.216Z",
+    "lastLocalImportParts": 48,
     "localCollection": {
-      "ok": true,
-      "attemptedAt": "2026-10-18T07:02:51.701Z",
+      "ok": false,
+      "attemptedAt": "2026-10-18T10:17:51.294Z",
       "lastSuccessAt": "2026-10-18T07:02:51.701Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 42,
-      "totalParts": 47,
+      "checkedParts": 43,
+      "totalParts": 48,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1"
     }
