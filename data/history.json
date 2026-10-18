@@ -2444,6 +2444,122 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:2558d07c85bf305583852ec5",
+      "bvid": "BV18YJY6tE4x",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "百亿有新券。hg迦巴卡利、30mm vp40s背刺，mg超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18YJY6tE4x/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-17T02:08:12.000Z",
+      "observedAt": "2026-10-18T07:07:03.349Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hg161/144g复国运动迦巴卡利kabaka凵拼装 | ¥54 | ,后天达《最后20件,现在下单后天达,超时必赔3元券 | 字幕：加巴卡利贝斯54了",
+        "startSeconds": 33,
+        "endSeconds": 35,
+        "cid": "42807199642",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0033.jpg",
+            "seconds": 33
+          },
+          {
+            "file": "frame-0034.jpg",
+            "seconds": 34
+          },
+          {
+            "file": "frame-0035.jpg",
+            "seconds": 35
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "加巴卡利贝斯54了",
+            "startSeconds": 32.67,
+            "endSeconds": 34.67,
+            "priceCents": 5400
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:16d0690a824e197ff938f63b",
+      "bvid": "BV18YJY6tE4x",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "百亿有新券。hg迦巴卡利、30mm vp40s背刺，mg超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18YJY6tE4x/",
+      "modelName": "零号机",
+      "grade": "RG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T02:08:12.000Z",
+      "observedAt": "2026-10-18T07:07:03.349Z",
+      "notes": "画面OCR提取，画面券后价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代rgeva新福音战士零号机0号机普通版 | 口券后¥1323¥1 | 已71件.最后1件 抢先优惠价",
+        "startSeconds": 36,
+        "endSeconds": 43,
+        "cid": "42807199642",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0036.jpg",
+            "seconds": 36
+          },
+          {
+            "file": "frame-0037.jpg",
+            "seconds": 37
+          },
+          {
+            "file": "frame-0038.jpg",
+            "seconds": 38
+          },
+          {
+            "file": "frame-0039.jpg",
+            "seconds": 39
+          },
+          {
+            "file": "frame-0040.jpg",
+            "seconds": 40
+          },
+          {
+            "file": "frame-0043.jpg",
+            "seconds": 43
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -2451,18 +2567,18 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T07:05:38.593Z",
-    "lastLocalImportParts": 45,
+    "lastLocalImportAt": "2026-10-18T07:06:17.664Z",
+    "lastLocalImportParts": 47,
     "localCollection": {
-      "ok": false,
+      "ok": true,
       "attemptedAt": "2026-10-18T07:02:51.701Z",
-      "lastSuccessAt": "2026-10-16T05:56:36.965Z"
+      "lastSuccessAt": "2026-10-18T07:02:51.701Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 7,
-      "totalParts": 45,
+      "checkedParts": 9,
+      "totalParts": 47,
       "failedParts": 1,
       "revision": "visual-2026-10-18.1"
     }
