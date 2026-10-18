@@ -2366,6 +2366,84 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:2bab8be6cc3ad756230ca00e",
+      "bvid": "BV11XJt6uEwU",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "京东plus会员有东西可冲！p2 hg卡尔玛扎古背刺。",
+      "videoUrl": "https://www.bilibili.com/video/BV11XJt6uEwU/",
+      "modelName": "卡尔玛扎古",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-16T11:00:35.000Z",
+      "observedAt": "2026-10-18T07:06:18.889Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "卡尔玛扎古背刺百爷 现在53了",
+        "startSeconds": 0.1,
+        "endSeconds": 2.7,
+        "cid": "42795469887",
+        "page": 2,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:fc22b369ce2f50d81be71924",
+      "bvid": "BV1AMJv6WE9o",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg异端审判改、水扎古、强袭杰刚、海军勇士背刺，hg龙飞、shf30周年迪迦降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1AMJv6WE9o/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7900,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T07:08:44.000Z",
+      "observedAt": "2026-10-18T07:06:18.889Z",
+      "notes": "画面OCR提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代〗hguc104强袭型杰刚rgm-89s高达uc拼装 | 0券后¥79 | 满10减5",
+        "startSeconds": 12,
+        "endSeconds": 14,
+        "cid": "42814146959",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0012.jpg",
+            "seconds": 12
+          },
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -2373,8 +2451,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T07:04:58.794Z",
-    "lastLocalImportParts": 41,
+    "lastLocalImportAt": "2026-10-18T07:05:38.593Z",
+    "lastLocalImportParts": 45,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-18T07:02:51.701Z",
@@ -2383,8 +2461,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 5,
-      "totalParts": 41,
+      "checkedParts": 7,
+      "totalParts": 45,
       "failedParts": 1,
       "revision": "visual-2026-10-18.1"
     }
