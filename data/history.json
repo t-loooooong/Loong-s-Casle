@@ -4546,6 +4546,78 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:6e8c397bf2eaa9a6ee59101f",
+      "bvid": "BV1JeJe62EBg",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "盒损（rg初号机、二号机、mg战蟹、、马格南、空降百式、hg路西法、风暴海因德里、迦巴卡利、伊芙利特、重装传令骑兵、德莱森、g战机套）背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1JeJe62EBg/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-17T07:17:15.000Z",
+      "observedAt": "2026-10-18T11:50:36.085Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "hguc1741/144am×.009德莱森高达zz版¥96 | ¥150 | mg1/100海牛高达卡版 v288 | 字幕：核损的德莱森贝茨96了",
+        "startSeconds": 17,
+        "endSeconds": 27,
+        "cid": "42814343511",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          },
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0019.jpg",
+            "seconds": 19
+          },
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          },
+          {
+            "file": "frame-0027.jpg",
+            "seconds": 27
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "核损的德莱森贝茨96了",
+            "startSeconds": 16.64,
+            "endSeconds": 18.8,
+            "priceCents": 9600
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -4567,7 +4639,7 @@
       "totalParts": 48,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 39
+      "refreshPending": 37
     }
   }
 }
