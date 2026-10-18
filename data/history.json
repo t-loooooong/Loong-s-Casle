@@ -2168,6 +2168,204 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:b9d1aa91cba1214e052c4491",
+      "bvid": "BV18YJY6tE4x",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "百亿有新券。hg迦巴卡利、30mm vp40s背刺，mg超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV18YJY6tE4x/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-17T02:08:12.000Z",
+      "observedAt": "2026-10-18T07:05:14.452Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "加巴卡利贝斯54了",
+        "startSeconds": 32.67,
+        "endSeconds": 34.67,
+        "cid": "42807199642",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:a7bc3283a277169724ee834d",
+      "bvid": "BV17aJ86aEg8",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "rg初号机、hg海盗、x分裂者背刺，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV17aJ86aEg8/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-16T15:31:06.000Z",
+      "observedAt": "2026-10-18T07:05:14.452Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "海盗背刺70了",
+        "startSeconds": 3.96,
+        "endSeconds": 5.339,
+        "cid": "42799203114",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:81f40137d777eafce3500069",
+      "bvid": "BV1U2Jt6VEqs",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "p3为反向情况你有兄弟冲了提醒他。rg零号机、mg马格南、p2夏亚勇士、hg强袭杰刚，p3 hg全装备海盗，p4 mg卡沙、hg扎古1背刺，hg镇暴吉姆降价",
+      "videoUrl": "https://www.bilibili.com/video/BV1U2Jt6VEqs/",
+      "modelName": "零号机",
+      "grade": "RG",
+      "scale": null,
+      "priceCents": 14400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-16T11:15:58.000Z",
+      "observedAt": "2026-10-18T07:05:14.452Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "0号机背刺百亿 现在144了",
+        "startSeconds": 1.379,
+        "endSeconds": 3.379,
+        "cid": "42793502476",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:e870285cdf4196a7a6448bdd",
+      "bvid": "BV1VNJe6iEqG",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森、g战机套、exs、p2 re维基纳背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1VNJe6iEqG/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T08:53:47.000Z",
+      "observedAt": "2026-10-18T07:05:14.452Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0291/144msa·0011exs高达拼装模型 | ¥108 | 先用后付丨支持0元下单,确认收货后再付款",
+        "startSeconds": 0,
+        "endSeconds": 4,
+        "cid": "42816637624",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:8aa2fe5bfaa2fd1b926d8b86",
+      "bvid": "BV1VNJe6iEqG",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森、g战机套、exs、p2 re维基纳背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1VNJe6iEqG/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T08:53:47.000Z",
+      "observedAt": "2026-10-18T07:05:14.452Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc1741/144am×·009德莱森高达zz版再 | ¥10t9 | 0先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 5,
+        "endSeconds": 8,
+        "cid": "42816637624",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          },
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -2175,8 +2373,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T07:04:06.199Z",
-    "lastLocalImportParts": 36,
+    "lastLocalImportAt": "2026-10-18T07:04:58.794Z",
+    "lastLocalImportParts": 41,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-18T07:02:51.701Z",
@@ -2185,8 +2383,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 3,
-      "totalParts": 36,
+      "checkedParts": 5,
+      "totalParts": 41,
       "failedParts": 1,
       "revision": "visual-2026-10-18.1"
     }
