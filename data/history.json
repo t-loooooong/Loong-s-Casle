@@ -4814,6 +4814,73 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:e8fe38571539535923932655",
+      "bvid": "BV1eVJB62EHK",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "shf西索、mg维达尔、蓝魔蟹、hg德莱森、g战机套、exs、实验魔蟹、异端审判、盒损（mg马克贝老虎、骁骑）背刺，hg海涅命运降价，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1eVJB62EHK/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-17T15:18:14.000Z",
+      "observedAt": "2026-10-18T12:15:20.684Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc机动战士高达029ex-s高达拼装模型 | ¥107 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：EXS贝斯107了",
+        "startSeconds": 23,
+        "endSeconds": 27,
+        "cid": "42826074026",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          },
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          },
+          {
+            "file": "frame-0027.jpg",
+            "seconds": 27
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "EXS贝斯107了",
+            "startSeconds": 22.92,
+            "endSeconds": 25.039,
+            "priceCents": 10700
+          }
+        ]
+      },
+      "correctsObservationIds": [
+        "local-auto:768a1f85ea3d8e84064df518"
+      ]
     }
   ],
   "meta": {
