@@ -3658,6 +3658,190 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:3ef95190c77db585f87c257e",
+      "bvid": "BV1tupq63E7N",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg迦巴卡利、加萨c、粉基拉祖鲁、盒损格雷兹艾因、p2梅萨背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1tupq63E7N/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T12:32:01.000Z",
+      "observedAt": "2026-10-18T07:17:31.892Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代1/144hg16g复国运动迦巴卡利kabaka凵高达拼 | ¥55 | 万代1/144hg16g复国运动迦巴卡利kabaka凵高达拼 | 字幕：加巴卡利背刺55了",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "cid": "42711844589",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "加巴卡利背刺55了",
+            "startSeconds": 1.3,
+            "endSeconds": 2.7,
+            "priceCents": 5500
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:64ce1f6581f6375e247b0e62",
+      "bvid": "BV1tupq63E7N",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg迦巴卡利、加萨c、粉基拉祖鲁、盒损格雷兹艾因、p2梅萨背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1tupq63E7N/",
+      "modelName": "格雷兹艾因",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-13T12:32:01.000Z",
+      "observedAt": "2026-10-18T07:17:31.892Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]hg1/144格雷兹艾因铁血孤儿团高达拼装模型 | ¥56.5 | 〖万代]hg1/144格雷兹艾因铁血孤儿团高达拼装模型 | 〖万代]hg1/144格雷兹艾因铁血孤儿团高达拼装模型 | ¥56,5 | 〖万代]hg1/144格雷兹艾因铁血孤儿团高达拼装模型",
+        "startSeconds": 4,
+        "endSeconds": 4,
+        "cid": "42711844589",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          },
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          },
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:ef7df7818dcff1bbea94fb3a",
+      "bvid": "BV1tupq63E7N",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg迦巴卡利、加萨c、粉基拉祖鲁、盒损格雷兹艾因、p2梅萨背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1tupq63E7N/",
+      "modelName": "加撒C",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T12:32:01.000Z",
+      "observedAt": "2026-10-18T07:17:31.892Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0631/144am×.003加萨c加撒c量产型高达 | ¥63 | 先用后付《支持0元下单,确认收货后再付款 万代hguc0631/144am×.003加萨c加撒c量产型高达 | 字幕：加萨C背驰63了",
+        "startSeconds": 13,
+        "endSeconds": 18,
+        "cid": "42711844589",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          },
+          {
+            "file": "frame-0016.jpg",
+            "seconds": 16
+          },
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          },
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "加萨C背驰63了",
+            "startSeconds": 12.97,
+            "endSeconds": 14.529,
+            "priceCents": 6300
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -3675,7 +3859,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 37,
+      "checkedParts": 39,
       "totalParts": 47,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1"
