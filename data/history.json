@@ -3184,6 +3184,72 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:7b7d2e494bb77e941ba168ab",
+      "bvid": "BV1w1Jk63E4v",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "复刻元祖、hg七号机、s高达、mg马克贝老虎、盒损卡沙背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1w1Jk63E4v/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-15T05:12:28.000Z",
+      "observedAt": "2026-10-18T07:13:42.935Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代63534hguc0231/144s高达机动战士z高达 | ¥75 | 先用后付|支持0元下单,确认收货后再付款 | 字幕：我之前从来没弄过S高达背刺75了 / 我之前从来没弄过S高达背刺75了 核损是68",
+        "startSeconds": 23,
+        "endSeconds": 26,
+        "cid": "42756671046",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          },
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "我之前从来没弄过S高达背刺75了",
+            "startSeconds": 21.179,
+            "endSeconds": 24.42,
+            "priceCents": 7500
+          },
+          {
+            "text": "我之前从来没弄过S高达背刺75了 核损是68",
+            "startSeconds": 21.179,
+            "endSeconds": 25.32,
+            "priceCents": 6800
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -3201,7 +3267,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 24,
+      "checkedParts": 26,
       "totalParts": 47,
       "failedParts": 4,
       "revision": "visual-2026-10-18.1"
