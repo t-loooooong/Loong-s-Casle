@@ -3842,6 +3842,292 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:a2361025a61b56305184814f",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "路西法",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9100,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-18T07:18:26.582Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [
+        {
+          "label": "百亿（字幕原称）",
+          "priceCents": 8700,
+          "quoteText": "路西法继续降91了 百亿是87",
+          "startSeconds": 12.808,
+          "page": 1
+        }
+      ],
+      "evidence": {
+        "text": "路西法继续降91了 百亿是87 | 现货万代hg111/144路西法高达g复国高达拼装模型 | ¥91 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：路西法继续降91了",
+        "startSeconds": 13,
+        "endSeconds": 16,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          },
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15
+          },
+          {
+            "file": "frame-0016.jpg",
+            "seconds": 16
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "路西法继续降91了",
+            "startSeconds": 12.808,
+            "endSeconds": 14.628,
+            "priceCents": 9100
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:a0edc84a9e92b8e6415883b1",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "加撒C",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-18T07:18:26.582Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hguc0631/144加撒c加薩c加萨c量产型 | ¥65 | 0先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 10,
+        "endSeconds": 12,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0010.jpg",
+            "seconds": 10
+          },
+          {
+            "file": "frame-0011.jpg",
+            "seconds": 11
+          },
+          {
+            "file": "frame-0012.jpg",
+            "seconds": 12
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:0d497ddcb1a421a8ba1bad60",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-18T07:18:26.582Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hguc1721/144am×.009德莱森大魔zz版 | ¥107 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：德莱森继续降107了 / 德莱森继续降107了 核损是106",
+        "startSeconds": 17,
+        "endSeconds": 20,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          },
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0019.jpg",
+            "seconds": 19
+          },
+          {
+            "file": "frame-0020.jpg",
+            "seconds": 20
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "德莱森继续降107了",
+            "startSeconds": 16.689,
+            "endSeconds": 18.388,
+            "priceCents": 10700
+          },
+          {
+            "text": "德莱森继续降107了 核损是106",
+            "startSeconds": 16.689,
+            "endSeconds": 19.388,
+            "priceCents": 10600
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:7b9f100c6fcec300de5b8cd7",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "马格南",
+      "grade": "MG",
+      "scale": null,
+      "priceCents": 20400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-18T07:18:26.582Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代mg1/100马格南高达magnumage2玛格 | ¥204 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：百亿是100马格南接着降 现在204了",
+        "startSeconds": 21,
+        "endSeconds": 23,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0021.jpg",
+            "seconds": 21
+          },
+          {
+            "file": "frame-0022.jpg",
+            "seconds": 22
+          },
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "百亿是100马格南接着降 现在204了",
+            "startSeconds": 19.388,
+            "endSeconds": 22.32,
+            "priceCents": 20400
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:718eb23a77aa12ff65cdf33a",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "GP03",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-18T07:18:26.582Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。截图仅保留在本机审计目录。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hghguc0251/144gp03sgp03高达试作 | ¥63 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 24,
+        "endSeconds": 26,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -3859,7 +4145,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 39,
+      "checkedParts": 41,
       "totalParts": 47,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1"
