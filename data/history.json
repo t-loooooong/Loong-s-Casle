@@ -4434,6 +4434,118 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:b1ecc71b7650f330b6e16b97",
+      "bvid": "BV1eVJB62EHK",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "shf西索、mg维达尔、蓝魔蟹、hg德莱森、g战机套、exs、实验魔蟹、异端审判、盒损（mg马克贝老虎、骁骑）背刺，hg海涅命运降价，午夜羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1eVJB62EHK/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T15:18:14.000Z",
+      "observedAt": "2026-10-18T11:49:54.791Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc机动战士高达029ex-s高达拼装模型 | ¥107 | 0先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 23,
+        "endSeconds": 27,
+        "cid": "42826074026",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0023.jpg",
+            "seconds": 23
+          },
+          {
+            "file": "frame-0024.jpg",
+            "seconds": 24
+          },
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          },
+          {
+            "file": "frame-0027.jpg",
+            "seconds": 27
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:a010dcb3f2cc10c4fab9bcd7",
+      "bvid": "BV1VNJe6iEqG",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg德莱森、g战机套、exs、p2 re维基纳背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1VNJe6iEqG/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-17T08:53:47.000Z",
+      "observedAt": "2026-10-18T11:49:54.791Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc0291/144msa·0011exs高达拼装模型 | ¥108 | 先用后付丨支持0元下单,确认收货后再付款",
+        "startSeconds": 0,
+        "endSeconds": 4,
+        "cid": "42816637624",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -4455,7 +4567,7 @@
       "totalParts": 48,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 41
+      "refreshPending": 39
     }
   }
 }
