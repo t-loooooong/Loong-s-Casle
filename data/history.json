@@ -5032,11 +5032,11 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 49,
+      "checkedParts": 50,
       "totalParts": 55,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 3
+      "refreshPending": 2
     },
     "lastRuleRepairAt": "2026-10-18T11:56:08.563Z"
   }
