@@ -5015,6 +5015,81 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:26642aeab84db8389b974246",
+      "bvid": "BV173pB6fE49",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg加撒c、海军勇士、x分裂者、gp03、路西法、mg空降百式、月光x、马格南背刺，hg德莱森降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV173pB6fE49/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 10700,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-13T11:04:12.000Z",
+      "observedAt": "2026-10-19T00:46:59.083Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [
+        {
+          "label": "盒损（画面字幕，需复核）",
+          "priceCents": 600,
+          "quoteText": "盒损是6百亿是0专属售后保障《专属客服闪电退换售后无忧",
+          "startSeconds": 19,
+          "page": 1,
+          "reviewRequired": true
+        }
+      ],
+      "evidence": {
+        "text": "现货万代hguc1721/144am×.009德莱森大魔zz版 | ¥107 | 先用后付《支持0元下单,确认收货后再付款 | 条件价字幕（非主价格）：盒损是6百亿是0专属售后保障《专属客服闪电退换售后无忧 | 字幕：德莱森继续降107了 / 德莱森继续降107了 核损是106",
+        "startSeconds": 17,
+        "endSeconds": 20,
+        "cid": "42709748883",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 17
+          },
+          {
+            "file": "frame-0018.jpg",
+            "seconds": 18
+          },
+          {
+            "file": "frame-0019.jpg",
+            "seconds": 19
+          },
+          {
+            "file": "frame-0020.jpg",
+            "seconds": 20
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "德莱森继续降107了",
+            "startSeconds": 16.689,
+            "endSeconds": 18.388,
+            "priceCents": 10700
+          },
+          {
+            "text": "德莱森继续降107了 核损是106",
+            "startSeconds": 16.689,
+            "endSeconds": 19.388,
+            "priceCents": 10600
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5036,7 +5111,7 @@
       "totalParts": 55,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
-      "refreshPending": 2
+      "refreshPending": 1
     },
     "lastRuleRepairAt": "2026-10-18T11:56:08.563Z"
   }
