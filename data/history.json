@@ -4881,6 +4881,36 @@
       "correctsObservationIds": [
         "local-auto:768a1f85ea3d8e84064df518"
       ]
+    },
+    {
+      "id": "local-auto:07de2abe657bc8727808c9b3",
+      "bvid": "BV1BbnV6pEgD",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "小程序明天下午4点记得闹钟！hg海涅命运、里歇尔c降价，shf库巴、p2 hg迦巴卡利、p3卡尔玛扎古背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1BbnV6pEgD/",
+      "modelName": "卡尔玛扎古",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5100,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-18T14:20:49.000Z",
+      "observedAt": "2026-10-19T00:44:44.489Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "卡尔玛扎古背刺51了",
+        "startSeconds": 0.08,
+        "endSeconds": 2.2,
+        "cid": "42852617729",
+        "page": 3,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -4888,18 +4918,18 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-18T10:18:10.046Z",
-    "lastLocalImportParts": 48,
+    "lastLocalImportAt": "2026-10-19T00:44:25.995Z",
+    "lastLocalImportParts": 51,
     "localCollection": {
-      "ok": true,
-      "attemptedAt": "2026-10-18T10:17:51.294Z",
+      "ok": false,
+      "attemptedAt": "2026-10-19T00:44:01.291Z",
       "lastSuccessAt": "2026-10-18T10:17:51.294Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 43,
-      "totalParts": 48,
+      "checkedParts": 45,
+      "totalParts": 51,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 3
