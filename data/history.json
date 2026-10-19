@@ -4963,6 +4963,58 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:ada6fc3c1bd2f12760beebc2",
+      "bvid": "BV1sonV6PEue",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg传令骑兵、索恩魔灵、重装传令骑兵、学院重骑、海因德里、恶魔审判、p2高战蟹、p3（rg海牛、hg复仇扎古）背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1sonV6PEue/",
+      "modelName": "零号机",
+      "grade": "RG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-18T13:23:23.000Z",
+      "observedAt": "2026-10-19T00:45:31.362Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代rg零号机0号机普通版eva机世纪福音战士可动拼 | ¥145 | 先用后付:支持0元下单,确认收货后再付款 万代rg零号机0号机普通版eva机世纪福音战士可动拼",
+        "startSeconds": 3,
+        "endSeconds": 6,
+        "cid": "42850389327",
+        "page": 3,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          },
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -4970,18 +5022,18 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-19T00:44:57.569Z",
-    "lastLocalImportParts": 54,
+    "lastLocalImportAt": "2026-10-19T00:45:22.956Z",
+    "lastLocalImportParts": 55,
     "localCollection": {
-      "ok": false,
+      "ok": true,
       "attemptedAt": "2026-10-19T00:44:01.291Z",
-      "lastSuccessAt": "2026-10-18T10:17:51.294Z"
+      "lastSuccessAt": "2026-10-19T00:44:01.291Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 47,
-      "totalParts": 54,
+      "checkedParts": 49,
+      "totalParts": 55,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 3
