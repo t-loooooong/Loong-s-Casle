@@ -5529,6 +5529,66 @@
         "subtitleEvidence": []
       },
       "correctsObservationIds": []
+    },
+    {
+      "id": "local-auto:f32c3ff49b8271daff0de2a2",
+      "bvid": "BV1jLnj6fE9x",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "淘宝店活动一般，立即拼就安排好人。hg格雷兹艾因、p2（rg闪光、hg exs）、p3 hg七号机背刺，mg超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jLnj6fE9x/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 100500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-19T01:57:02.000Z",
+      "observedAt": "2026-10-20T00:59:07.567Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]hguc0291/144msa-0011(ext)前哨战ex-s高 | ¥96 | ,后天达《最后10件,现在下单后天达,超时必赔3元券 | 字幕：EXS背刺96了",
+        "startSeconds": 3,
+        "endSeconds": 6,
+        "cid": "42860677349",
+        "page": 2,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          },
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "EXS背刺96了",
+            "startSeconds": 2.7199999999999998,
+            "endSeconds": 5.019,
+            "priceCents": 9600
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5536,8 +5596,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:57:12.773Z",
-    "lastLocalImportParts": 66,
+    "lastLocalImportAt": "2026-10-20T00:58:55.001Z",
+    "lastLocalImportParts": 67,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5546,8 +5606,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 59,
-      "totalParts": 66,
+      "checkedParts": 60,
+      "totalParts": 67,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
