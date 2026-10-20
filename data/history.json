@@ -5360,6 +5360,36 @@
         "language": "ai-zh",
         "subtitleKind": "bilibili-ai"
       }
+    },
+    {
+      "id": "local-auto:0a82702a8a73e95a31ff54f0",
+      "bvid": "BV14Pnn6XEAB",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg黑兔降价，mg马格南、p3 hg强袭杰刚背刺，p2龟霸贵，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV14Pnn6XEAB/",
+      "modelName": "马格南",
+      "grade": "MG",
+      "scale": null,
+      "priceCents": 19900,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-19T08:41:14.000Z",
+      "observedAt": "2026-10-20T00:46:37.194Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。另有盒况、历史价或其他条件不明的候选，未作为可用价格。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "马格南贝茨199了",
+        "startSeconds": 1.34,
+        "endSeconds": 2.779,
+        "cid": "42869392167",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -5367,8 +5397,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:46:05.250Z",
-    "lastLocalImportParts": 59,
+    "lastLocalImportAt": "2026-10-20T00:46:26.817Z",
+    "lastLocalImportParts": 60,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5378,8 +5408,8 @@
       "enabled": true,
       "status": "partial",
       "checkedParts": 53,
-      "totalParts": 59,
-      "failedParts": 6,
+      "totalParts": 60,
+      "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
     },
