@@ -5480,6 +5480,55 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:29a53e2a1f128185399e43a9",
+      "bvid": "BV1jLnj6fE9x",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "淘宝店活动一般，立即拼就安排好人。hg格雷兹艾因、p2（rg闪光、hg exs）、p3 hg七号机背刺，mg超级高达降价，早间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1jLnj6fE9x/",
+      "modelName": "Ex-S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 100500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-19T01:57:02.000Z",
+      "observedAt": "2026-10-20T00:57:51.725Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc机动战士高达029ex-s高达拼装模型 | ,最后6小时¥1005券前¥102〉已抢7件最后7件 | 平台限时立减1.5元",
+        "startSeconds": 61.4,
+        "endSeconds": 63.767,
+        "cid": "42860479789",
+        "page": 1,
+        "language": "zh",
+        "subtitleKind": "local-whisper",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0052.jpg",
+            "seconds": 61.4
+          },
+          {
+            "file": "frame-0053.jpg",
+            "seconds": 62.567
+          },
+          {
+            "file": "frame-0054.jpg",
+            "seconds": 63.767
+          }
+        ],
+        "subtitleEvidence": []
+      },
+      "correctsObservationIds": []
     }
   ],
   "meta": {
@@ -5487,8 +5536,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:47:45.939Z",
-    "lastLocalImportParts": 65,
+    "lastLocalImportAt": "2026-10-20T00:57:12.773Z",
+    "lastLocalImportParts": 66,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5497,8 +5546,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 58,
-      "totalParts": 65,
+      "checkedParts": 59,
+      "totalParts": 66,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
