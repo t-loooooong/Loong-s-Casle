@@ -5596,8 +5596,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:58:55.001Z",
-    "lastLocalImportParts": 67,
+    "lastLocalImportAt": "2026-10-20T00:59:43.562Z",
+    "lastLocalImportParts": 68,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5606,8 +5606,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 60,
-      "totalParts": 67,
+      "checkedParts": 61,
+      "totalParts": 68,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
