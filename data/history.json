@@ -5206,6 +5206,130 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:32d1547b1a3767c55a5e3f72",
+      "bvid": "BV1PPJd62E5k",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "re维基纳、mgsd风灵（售罄）、hg奇拉格、迦巴卡利、沙漠大魔、白骑士、梅塔斯、p2 rg飞翼43背刺，hg雷霆黄扎古1降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1PPJd62E5k/",
+      "modelName": "沙漠大魔",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-19T11:48:44.000Z",
+      "observedAt": "2026-10-20T00:45:51.084Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "沙漠大魔背刺73了",
+        "startSeconds": 19.379,
+        "endSeconds": 21.26,
+        "cid": "42874112952",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:42eb0fc5f2e64eaa2d258867",
+      "bvid": "BV1PPJd62E5k",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "re维基纳、mgsd风灵（售罄）、hg奇拉格、迦巴卡利、沙漠大魔、白骑士、梅塔斯、p2 rg飞翼43背刺，hg雷霆黄扎古1降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1PPJd62E5k/",
+      "modelName": "维基纳",
+      "grade": "RE/100",
+      "scale": null,
+      "priceCents": 14400,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-19T11:48:44.000Z",
+      "observedAt": "2026-10-20T00:45:51.084Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "维金纳贝斯144了",
+        "startSeconds": 22.059,
+        "endSeconds": 23.66,
+        "cid": "42874112952",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:004dd79211c63ee1ff563d61",
+      "bvid": "BV1PPJd62E5k",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "re维基纳、mgsd风灵（售罄）、hg奇拉格、迦巴卡利、沙漠大魔、白骑士、梅塔斯、p2 rg飞翼43背刺，hg雷霆黄扎古1降价，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1PPJd62E5k/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-19T11:48:44.000Z",
+      "observedAt": "2026-10-20T00:45:51.084Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hg161/144g复国运动迦巴卡利kabaka凵拼装 | ¥508 | ,后天达》最后18件,现在下单后天达,超时必赔3元券 | 字幕：加巴卡利背刺51了",
+        "startSeconds": 0,
+        "endSeconds": 4,
+        "cid": "42874112952",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          },
+          {
+            "file": "frame-0003.jpg",
+            "seconds": 3
+          },
+          {
+            "file": "frame-0004.jpg",
+            "seconds": 4
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "加巴卡利背刺51了",
+            "startSeconds": 1.34,
+            "endSeconds": 2.899,
+            "priceCents": 5100
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5213,8 +5337,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:44:51.532Z",
-    "lastLocalImportParts": 56,
+    "lastLocalImportAt": "2026-10-20T00:45:23.162Z",
+    "lastLocalImportParts": 57,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5223,8 +5347,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 51,
-      "totalParts": 56,
+      "checkedParts": 52,
+      "totalParts": 57,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
