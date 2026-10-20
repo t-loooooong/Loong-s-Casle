@@ -5090,6 +5090,122 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:b3d23360fb970819f6b064ff",
+      "bvid": "BV1spJR6yEwE",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "叨逼下明天的淘宝福袋，看比冲有意思！rg飞翼43、hg德莱森、骁骑、mg dx背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1spJR6yEwE/",
+      "modelName": "扎克艾因",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7600,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-19T14:32:43.000Z",
+      "observedAt": "2026-10-20T00:45:21.624Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]57951hguc0241/144rms-141扎克艾因萨 | ¥76,5 | 先用后付《支持0元下单,确认收货后再付款",
+        "startSeconds": 56.8,
+        "endSeconds": 59.1,
+        "cid": "42878110062",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0050.jpg",
+            "seconds": 56.8
+          },
+          {
+            "file": "frame-0051.jpg",
+            "seconds": 57.967
+          },
+          {
+            "file": "frame-0052.jpg",
+            "seconds": 59.1
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:d659cbd7b2dcc49f9d0bcc13",
+      "bvid": "BV1spJR6yEwE",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "叨逼下明天的淘宝福袋，看比冲有意思！rg飞翼43、hg德莱森、骁骑、mg dx背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1spJR6yEwE/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-19T14:32:43.000Z",
+      "observedAt": "2026-10-20T00:45:21.624Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc1721/144am×.009德莱森大魔zz版拼装 | ¥94 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：德莱森贝斯94了",
+        "startSeconds": 65.9,
+        "endSeconds": 71.6,
+        "cid": "42878110062",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0058.jpg",
+            "seconds": 65.9
+          },
+          {
+            "file": "frame-0059.jpg",
+            "seconds": 67.033
+          },
+          {
+            "file": "frame-0060.jpg",
+            "seconds": 68.167
+          },
+          {
+            "file": "frame-0061.jpg",
+            "seconds": 69.3
+          },
+          {
+            "file": "frame-0062.jpg",
+            "seconds": 70.467
+          },
+          {
+            "file": "frame-0063.jpg",
+            "seconds": 71.6
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "德莱森贝斯94了",
+            "startSeconds": 65.129,
+            "endSeconds": 66.789,
+            "priceCents": 9400
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5097,18 +5213,18 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-19T00:45:22.956Z",
-    "lastLocalImportParts": 55,
+    "lastLocalImportAt": "2026-10-20T00:44:51.532Z",
+    "lastLocalImportParts": 56,
     "localCollection": {
-      "ok": true,
-      "attemptedAt": "2026-10-19T00:44:01.291Z",
+      "ok": false,
+      "attemptedAt": "2026-10-20T00:44:03.164Z",
       "lastSuccessAt": "2026-10-19T00:44:01.291Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 50,
-      "totalParts": 55,
+      "checkedParts": 51,
+      "totalParts": 56,
       "failedParts": 5,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
