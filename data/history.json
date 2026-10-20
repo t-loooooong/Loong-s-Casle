@@ -5390,6 +5390,96 @@
         "language": "ai-zh",
         "subtitleKind": "bilibili-ai"
       }
+    },
+    {
+      "id": "local-auto:4c796b5e6ce713b8ba0414f9",
+      "bvid": "BV1LHnE6YEdA",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg力克迪亚斯、hg卡尔玛扎古、盒损海军勇士背刺，mg超级高达降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1LHnE6YEdA/",
+      "modelName": "海军勇士",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-19T05:30:31.000Z",
+      "observedAt": "2026-10-20T00:48:19.801Z",
+      "notes": "候选金额 48 元，待复核：availability_or_payment_conditions、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "海军勇士贝斯核损 现在48了",
+        "startSeconds": 1.32,
+        "endSeconds": 3.359,
+        "cid": "42865000999",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:0f49e9b2c2a19c32a24b9c06",
+      "bvid": "BV1LHnE6YEdA",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg力克迪亚斯、hg卡尔玛扎古、盒损海军勇士背刺，mg超级高达降价，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1LHnE6YEdA/",
+      "modelName": "卡尔玛扎古",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 5000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-19T05:30:31.000Z",
+      "observedAt": "2026-10-20T00:48:19.801Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代59156hguc034卡尔玛指挥官扎古ms-06fs | ¥50 | 先用后付《支持0元下单,确认收货后再付款 | 字幕：卡尔玛扎古背刺50了",
+        "startSeconds": 5,
+        "endSeconds": 8,
+        "cid": "42865000999",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0005.jpg",
+            "seconds": 5
+          },
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          },
+          {
+            "file": "frame-0008.jpg",
+            "seconds": 8
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "卡尔玛扎古背刺50了",
+            "startSeconds": 5.038,
+            "endSeconds": 6.918,
+            "priceCents": 5000
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5397,8 +5487,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:47:22.573Z",
-    "lastLocalImportParts": 64,
+    "lastLocalImportAt": "2026-10-20T00:47:45.939Z",
+    "lastLocalImportParts": 65,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5407,8 +5497,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 57,
-      "totalParts": 64,
+      "checkedParts": 58,
+      "totalParts": 65,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
