@@ -5596,12 +5596,12 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:59:43.562Z",
+    "lastLocalImportAt": "2026-10-20T01:01:07.862Z",
     "lastLocalImportParts": 68,
     "localCollection": {
-      "ok": false,
+      "ok": true,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
-      "lastSuccessAt": "2026-10-19T00:44:01.291Z"
+      "lastSuccessAt": "2026-10-20T00:44:03.164Z"
     },
     "visualCollection": {
       "enabled": true,
