@@ -5330,6 +5330,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:73b4731586551e8ddbf7e4de",
+      "bvid": "BV1gdnJ6FEdp",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg雅典娜降价，hg德莱森、shf西索背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1gdnJ6FEdp/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9600,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-19T09:59:57.000Z",
+      "observedAt": "2026-10-20T00:46:20.003Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "还得等德莱森贝茨96了",
+        "startSeconds": 2.859,
+        "endSeconds": 5.29,
+        "cid": "42871359085",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -5337,8 +5367,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T00:45:23.162Z",
-    "lastLocalImportParts": 57,
+    "lastLocalImportAt": "2026-10-20T00:46:05.250Z",
+    "lastLocalImportParts": 59,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-20T00:44:03.164Z",
@@ -5347,9 +5377,9 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 52,
-      "totalParts": 57,
-      "failedParts": 5,
+      "checkedParts": 53,
+      "totalParts": 59,
+      "failedParts": 6,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 1
     },
