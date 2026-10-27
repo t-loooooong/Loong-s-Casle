@@ -5810,6 +5810,62 @@
         "language": "ai-zh",
         "subtitleKind": "bilibili-ai"
       }
+    },
+    {
+      "id": "local-auto:b715f4bd6c2bb3b5835449f3",
+      "bvid": "BV1DWnZ6eErb",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg超级高达、p4卡沙、p5倒a套（p3卡v2ab、多瓦吉）rg全装备独角兽、hg新梅萨（p2德莱森、吉姆3）背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1DWnZ6eErb/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 8800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-26T13:52:16.000Z",
+      "observedAt": "2026-10-27T01:21:13.693Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hguc1721/144am×·009德莱森大魔zz版拼装 | ¥88 | 0先用后付《支持0元下单,确认收货后再付款 | 字幕：德莱森贝茨88了还会降",
+        "startSeconds": 0,
+        "endSeconds": 2,
+        "cid": "43076620166",
+        "page": 2,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "德莱森贝茨88了还会降",
+            "startSeconds": 0.1,
+            "endSeconds": 2.48,
+            "priceCents": 8800
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -5817,8 +5873,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:20:19.911Z",
-    "lastLocalImportParts": 69,
+    "lastLocalImportAt": "2026-10-27T01:20:50.827Z",
+    "lastLocalImportParts": 72,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -5827,8 +5883,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 63,
-      "totalParts": 69,
+      "checkedParts": 65,
+      "totalParts": 72,
       "failedParts": 6,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
