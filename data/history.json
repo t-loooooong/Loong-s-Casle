@@ -5896,6 +5896,36 @@
         "language": "ai-zh",
         "subtitleKind": "bilibili-ai"
       }
+    },
+    {
+      "id": "local-auto:2f7c95f1dfb3dc490ffc6411",
+      "bvid": "BV1Aind6UEjd",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg卡掉毛（售罄）、fazz、老虎原型机、蜥蜴、hg叙述c、强袭杰刚、新梅萨、大气宇宙、vf25f、p3迦巴卡利（p2mb初音、mg超级高达）背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1Aind6UEjd/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 4800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-26T09:30:05.000Z",
+      "observedAt": "2026-10-27T01:22:07.007Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "加巴卡利贝茨48了",
+        "startSeconds": 0.1,
+        "endSeconds": 1.7,
+        "cid": "43071638278",
+        "page": 3,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -5903,8 +5933,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:21:23.989Z",
-    "lastLocalImportParts": 75,
+    "lastLocalImportAt": "2026-10-27T01:21:56.003Z",
+    "lastLocalImportParts": 78,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -5913,9 +5943,9 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 67,
-      "totalParts": 75,
-      "failedParts": 6,
+      "checkedParts": 68,
+      "totalParts": 78,
+      "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
     },
