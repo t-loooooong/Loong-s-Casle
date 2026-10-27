@@ -6076,6 +6076,62 @@
         "language": "ai-zh",
         "subtitleKind": "bilibili-ai"
       }
+    },
+    {
+      "id": "local-auto:084bff3fef0f08a695629825",
+      "bvid": "BV1Aind6UEjd",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg卡掉毛（售罄）、fazz、老虎原型机、蜥蜴、hg叙述c、强袭杰刚、新梅萨、大气宇宙、vf25f、p3迦巴卡利（p2mb初音、mg超级高达）背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1Aind6UEjd/",
+      "modelName": "迦巴卡利",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 4800,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-26T09:30:05.000Z",
+      "observedAt": "2026-10-27T01:24:06.567Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hg1/144g复国运动迦巴卡利kabaka凵高达拼 | ¥48 | 满1000返50 店铺满诉 | 字幕：加巴卡利贝茨48了",
+        "startSeconds": 0,
+        "endSeconds": 2,
+        "cid": "43071638278",
+        "page": 3,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0000.jpg",
+            "seconds": 0
+          },
+          {
+            "file": "frame-0001.jpg",
+            "seconds": 1
+          },
+          {
+            "file": "frame-0002.jpg",
+            "seconds": 2
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "加巴卡利贝茨48了",
+            "startSeconds": 0.1,
+            "endSeconds": 1.7,
+            "priceCents": 4800
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -6083,8 +6139,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:22:28.476Z",
-    "lastLocalImportParts": 81,
+    "lastLocalImportAt": "2026-10-27T01:23:26.711Z",
+    "lastLocalImportParts": 87,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -6093,8 +6149,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 70,
-      "totalParts": 81,
+      "checkedParts": 72,
+      "totalParts": 87,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
