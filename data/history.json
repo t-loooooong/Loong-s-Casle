@@ -5780,6 +5780,36 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:7844ed9d889944b8b0faeac8",
+      "bvid": "BV1DWnZ6eErb",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg超级高达、p4卡沙、p5倒a套（p3卡v2ab、多瓦吉）rg全装备独角兽、hg新梅萨（p2德莱森、吉姆3）背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1DWnZ6eErb/",
+      "modelName": "梅萨F01",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-26T13:52:16.000Z",
+      "observedAt": "2026-10-27T01:20:31.676Z",
+      "notes": "候选金额 128 元，待复核：model_variant_needs_review、implicit_cny_unit",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "新梅萨背刺128了",
+        "startSeconds": 7.049,
+        "endSeconds": 9.349,
+        "cid": "43075898595",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -5787,19 +5817,19 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-20T01:01:07.862Z",
-    "lastLocalImportParts": 68,
+    "lastLocalImportAt": "2026-10-27T01:20:19.911Z",
+    "lastLocalImportParts": 69,
     "localCollection": {
-      "ok": true,
-      "attemptedAt": "2026-10-20T00:44:03.164Z",
+      "ok": false,
+      "attemptedAt": "2026-10-27T01:20:11.848Z",
       "lastSuccessAt": "2026-10-20T00:44:03.164Z"
     },
     "visualCollection": {
       "enabled": true,
       "status": "partial",
       "checkedParts": 63,
-      "totalParts": 68,
-      "failedParts": 5,
+      "totalParts": 69,
+      "failedParts": 6,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
     },
