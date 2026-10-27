@@ -6132,6 +6132,288 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:a2e8d060b22d6cc13d581681",
+      "bvid": "BV12wHL6kEoy",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg夜莺、全装备海盗、mg百式坏、fazz、百式、力克迪亚斯、强人、p2红扎古、p3幻惑（p4卡多勇士、多瓦吉）背刺，hg钢坦克即将背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV12wHL6kEoy/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-25T09:45:32.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "海盗背刺90了",
+        "startSeconds": 30.3,
+        "endSeconds": 31.839,
+        "cid": "43042015898",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:e3a83f8b3e5e75f1321a0ce4",
+      "bvid": "BV1joH36JERE",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "除去驾驶舱门松，就是一台优秀的rg！rg飞翼43测评，2026测评第三十期。",
+      "videoUrl": "https://www.bilibili.com/video/BV1joH36JERE/",
+      "modelName": "飞翼43",
+      "grade": "RG",
+      "scale": null,
+      "priceCents": 100,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-25T08:16:52.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "一元就可以拿下我手里这个RG飞翼43",
+        "startSeconds": 52.479,
+        "endSeconds": 54.799,
+        "cid": "43039260869",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:e2c09f4d5f5dce1e987514e7",
+      "bvid": "BV1joH36JERE",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "除去驾驶舱门松，就是一台优秀的rg！rg飞翼43测评，2026测评第三十期。",
+      "videoUrl": "https://www.bilibili.com/video/BV1joH36JERE/",
+      "modelName": "ex强的这些经典机器也要",
+      "grade": "MG",
+      "scale": null,
+      "priceCents": 100,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-25T08:16:52.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "mg ex强的这些经典机器也要一元就可以入手",
+        "startSeconds": 56.039,
+        "endSeconds": 59,
+        "cid": "43039260869",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:3e050f734ade41b5b184b7ee",
+      "bvid": "BV1QVn96REXf",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg马格南、斩击扎古、维达尔、00xnr、hg黄扎古1、侦查扎古、创制燃焰、雅典娜、南瓜饼、里歇尔c、路西法、神木燃焰、海盗背刺，hg精神力mk2、侦查扎古降价",
+      "videoUrl": "https://www.bilibili.com/video/BV1QVn96REXf/",
+      "modelName": "马格南",
+      "grade": "MG",
+      "scale": null,
+      "priceCents": 19000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 85,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-26T06:56:04.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代mg1/100高达age2马格南magnum冠军可变形 | ¥190 | ,后天达《最后6件,现在下单后天达,超时必赔3元券 | 字幕：马格南背刺190了",
+        "startSeconds": 13,
+        "endSeconds": 14,
+        "cid": "43065607770",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0013.jpg",
+            "seconds": 13
+          },
+          {
+            "file": "frame-0014.jpg",
+            "seconds": 14
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "马格南背刺190了",
+            "startSeconds": 12.71,
+            "endSeconds": 14.589,
+            "priceCents": 19000
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:25734468b038966dadb1765f",
+      "bvid": "BV1QVn96REXf",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg马格南、斩击扎古、维达尔、00xnr、hg黄扎古1、侦查扎古、创制燃焰、雅典娜、南瓜饼、里歇尔c、路西法、神木燃焰、海盗背刺，hg精神力mk2、侦查扎古降价",
+      "videoUrl": "https://www.bilibili.com/video/BV1QVn96REXf/",
+      "modelName": "路西法",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7500,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-26T06:56:04.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]hg1/144g复国路西法高达拼装模型再版蓝 | ¥75 | 颅计6小时内发货1近期订单约2天内送达",
+        "startSeconds": 31,
+        "endSeconds": 32,
+        "cid": "43065607770",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0031.jpg",
+            "seconds": 31
+          },
+          {
+            "file": "frame-0032.jpg",
+            "seconds": 32
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:29f3ae2d3178826e826be13a",
+      "bvid": "BV1QVn96REXf",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg马格南、斩击扎古、维达尔、00xnr、hg黄扎古1、侦查扎古、创制燃焰、雅典娜、南瓜饼、里歇尔c、路西法、神木燃焰、海盗背刺，hg精神力mk2、侦查扎古降价",
+      "videoUrl": "https://www.bilibili.com/video/BV1QVn96REXf/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6200,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-26T06:56:04.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "〖万代]高达拼装模型hghguc1:144海盗高达×1骷髅 | ¥62 | 顺计6小时内发货]近期订单约2天内送达 | 字幕：海盗背刺62了",
+        "startSeconds": 38,
+        "endSeconds": 39,
+        "cid": "43065607770",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0038.jpg",
+            "seconds": 38
+          },
+          {
+            "file": "frame-0039.jpg",
+            "seconds": 39
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "海盗背刺62了",
+            "startSeconds": 37.168,
+            "endSeconds": 38.789,
+            "priceCents": 6200
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:c2c0a7aa9b893e6080b0afab",
+      "bvid": "BV1QVn96REXf",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg马格南、斩击扎古、维达尔、00xnr、hg黄扎古1、侦查扎古、创制燃焰、雅典娜、南瓜饼、里歇尔c、路西法、神木燃焰、海盗背刺，hg精神力mk2、侦查扎古降价",
+      "videoUrl": "https://www.bilibili.com/video/BV1QVn96REXf/",
+      "modelName": "德尔塔Plus",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 8600,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-26T06:56:04.000Z",
+      "observedAt": "2026-10-27T01:26:09.967Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "正版万代拼装模型hguc1151/144deltaplus德尔塔 | ¥86 | 计5小时内发货|近期订单约2天内送达",
+        "startSeconds": 40,
+        "endSeconds": 41,
+        "cid": "43065607770",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0040.jpg",
+            "seconds": 40
+          },
+          {
+            "file": "frame-0041.jpg",
+            "seconds": 41
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -6139,8 +6421,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:23:26.711Z",
-    "lastLocalImportParts": 87,
+    "lastLocalImportAt": "2026-10-27T01:24:23.567Z",
+    "lastLocalImportParts": 93,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -6149,8 +6431,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 72,
-      "totalParts": 87,
+      "checkedParts": 74,
+      "totalParts": 93,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
