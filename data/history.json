@@ -6576,6 +6576,70 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:f791dbb62bb241964174d85c",
+      "bvid": "BV12wHL6kEoy",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "hg夜莺、全装备海盗、mg百式坏、fazz、百式、力克迪亚斯、强人、p2红扎古、p3幻惑（p4卡多勇士、多瓦吉）背刺，hg钢坦克即将背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV12wHL6kEoy/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-25T09:45:32.000Z",
+      "observedAt": "2026-10-27T01:29:53.636Z",
+      "notes": "字幕／转写与画面联合提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代1/144hgbf035全武装海盗高达×igbft全装备 | ¥89,6 | 先用后付丨支持0元下单,确认收货后再付款 | 字幕：海盗背刺90了",
+        "startSeconds": 31,
+        "endSeconds": 35,
+        "cid": "43042015898",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0031.jpg",
+            "seconds": 31
+          },
+          {
+            "file": "frame-0032.jpg",
+            "seconds": 32
+          },
+          {
+            "file": "frame-0033.jpg",
+            "seconds": 33
+          },
+          {
+            "file": "frame-0034.jpg",
+            "seconds": 34
+          },
+          {
+            "file": "frame-0035.jpg",
+            "seconds": 35
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "海盗背刺90了",
+            "startSeconds": 30.3,
+            "endSeconds": 31.839,
+            "priceCents": 9000
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -6593,7 +6657,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 80,
+      "checkedParts": 82,
       "totalParts": 99,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
