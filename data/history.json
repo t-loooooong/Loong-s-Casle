@@ -6414,6 +6414,168 @@
         ],
         "subtitleEvidence": []
       }
+    },
+    {
+      "id": "local-auto:fd0f855193817558118038d3",
+      "bvid": "BV1YmHG6LE7d",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg强人、钛f91、重力大魔、黄扎古加农、黑京宝梵、hg海涅命运、龙飞、海盗、p2黑扎古1背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1YmHG6LE7d/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6300,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-25T05:49:02.000Z",
+      "observedAt": "2026-10-27T01:27:18.904Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "海盗背刺63了",
+        "startSeconds": 5.419,
+        "endSeconds": 6.66,
+        "cid": "43036315003",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
+    },
+    {
+      "id": "local-auto:9a70cf4e7596e7413e0f07d1",
+      "bvid": "BV1VnnU61EpC",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "强人、绿扎古、海牛、gp02、黑兔、3.0、战蟹、大剑、沙漠、倒a套、诺贝尔、勇士加农、海军、铁球、扎古1、水扎古、德莱森、卡尔玛、s高、热带、实验、神鸟、闪光",
+      "videoUrl": "https://www.bilibili.com/video/BV1VnnU61EpC/",
+      "modelName": "诺贝尔高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 7200,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-25T17:11:56.000Z",
+      "observedAt": "2026-10-27T01:27:18.904Z",
+      "notes": "画面OCR提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hgfc诺贝尔高达美少女机动武斗传g1/144拼装 | 0券后¥72 | 满10减5",
+        "startSeconds": 15.9,
+        "endSeconds": 18,
+        "cid": "43052433751",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0015.jpg",
+            "seconds": 15.9
+          },
+          {
+            "file": "frame-0016.jpg",
+            "seconds": 16.933
+          },
+          {
+            "file": "frame-0017.jpg",
+            "seconds": 18
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:ae477f4f4f5c043a2fe4cfac",
+      "bvid": "BV1VnnU61EpC",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "强人、绿扎古、海牛、gp02、黑兔、3.0、战蟹、大剑、沙漠、倒a套、诺贝尔、勇士加农、海军、铁球、扎古1、水扎古、德莱森、卡尔玛、s高、热带、实验、神鸟、闪光",
+      "videoUrl": "https://www.bilibili.com/video/BV1VnnU61EpC/",
+      "modelName": "S高达",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": null,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-25T17:11:56.000Z",
+      "observedAt": "2026-10-27T01:27:18.904Z",
+      "notes": "画面OCR提取，画面拼单/售价；条件、币种或字幕金额存在歧义，需人工复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hguc0231/144msa.0011s高达前哨战拼 | ¥65 | 已抢1件最后8件 先用后付|支持0元下单,确认收货后再付款",
+        "startSeconds": 31.767,
+        "endSeconds": 31.767,
+        "cid": "43052433751",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0030.jpg",
+            "seconds": 31.767
+          }
+        ],
+        "subtitleEvidence": []
+      }
+    },
+    {
+      "id": "local-auto:80809527bcf8430c17f7b4b1",
+      "bvid": "BV1VnnU61EpC",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "强人、绿扎古、海牛、gp02、黑兔、3.0、战蟹、大剑、沙漠、倒a套、诺贝尔、勇士加农、海军、铁球、扎古1、水扎古、德莱森、卡尔玛、s高、热带、实验、神鸟、闪光",
+      "videoUrl": "https://www.bilibili.com/video/BV1VnnU61EpC/",
+      "modelName": "德莱森",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9000,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-25T17:11:56.000Z",
+      "observedAt": "2026-10-27T01:27:18.904Z",
+      "notes": "画面OCR提取，画面拼单/售价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "现货万代hguc1721/144am×.009德莱森大魔zz版 | ¥90 | 先用后付支持0元下单,确认收货后再付款",
+        "startSeconds": 36,
+        "endSeconds": 37.067,
+        "cid": "43052433751",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0034.jpg",
+            "seconds": 36
+          },
+          {
+            "file": "frame-0035.jpg",
+            "seconds": 37.067
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -6421,8 +6583,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:24:23.567Z",
-    "lastLocalImportParts": 93,
+    "lastLocalImportAt": "2026-10-27T01:25:37.879Z",
+    "lastLocalImportParts": 98,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -6431,8 +6593,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 74,
-      "totalParts": 93,
+      "checkedParts": 76,
+      "totalParts": 99,
       "failedParts": 7,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
