@@ -5866,6 +5866,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:10785fee554a4f75eece6105",
+      "bvid": "BV1T1nR6XEzy",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mgsd风灵、hg r贾贾、精神力mk2、沙漠大魔、p2叙述c背刺，晚间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1T1nR6XEzy/",
+      "modelName": "沙漠大魔",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6600,
+      "originalPriceCents": null,
+      "priceType": "observed",
+      "status": "extracted",
+      "confidence": 65,
+      "extractionMethod": "local_auto_subtitle",
+      "publishedAt": "2026-10-26T11:47:41.000Z",
+      "observedAt": "2026-10-27T01:21:41.260Z",
+      "notes": "字幕与标题型号词表对应，视频报价；省略币种的口播金额按人民币理解，未核对原视频。等级沿用标题，同型号具体版本仍需确认。历史报价不保证仍可购买。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "沙漠大魔贝斯66了",
+        "startSeconds": 7.679,
+        "endSeconds": 9.48,
+        "cid": "43072884000",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai"
+      }
     }
   ],
   "meta": {
@@ -5873,8 +5903,8 @@
     "source": "initial_manual_records",
     "lastSubtitleImportAt": "2026-10-16T01:48:43.713Z",
     "lastSubtitleImportVideos": 3,
-    "lastLocalImportAt": "2026-10-27T01:20:50.827Z",
-    "lastLocalImportParts": 72,
+    "lastLocalImportAt": "2026-10-27T01:21:23.989Z",
+    "lastLocalImportParts": 75,
     "localCollection": {
       "ok": false,
       "attemptedAt": "2026-10-27T01:20:11.848Z",
@@ -5883,8 +5913,8 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 65,
-      "totalParts": 72,
+      "checkedParts": 67,
+      "totalParts": 75,
       "failedParts": 6,
       "revision": "visual-2026-10-18.1",
       "refreshPending": 0
