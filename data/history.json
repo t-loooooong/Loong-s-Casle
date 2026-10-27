@@ -6640,6 +6640,114 @@
           }
         ]
       }
+    },
+    {
+      "id": "local-auto:9fd239f6df4176a1f9f85aa9",
+      "bvid": "BV1YmHG6LE7d",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg强人、钛f91、重力大魔、黄扎古加农、黑京宝梵、hg海涅命运、龙飞、海盗、p2黑扎古1背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1YmHG6LE7d/",
+      "modelName": "海盗",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 6300,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "pending",
+      "confidence": 30,
+      "extractionMethod": "local_auto_dual",
+      "publishedAt": "2026-10-25T05:49:02.000Z",
+      "observedAt": "2026-10-27T01:32:33.000Z",
+      "notes": "字幕／转写与画面联合提取，画面券后价；条件、币种或字幕金额存在歧义，需人工复核。保留此前已提取的价格，不用冲突金额覆盖；当前状态为待复核。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hg海盗×1骷髅1/144hguc187m×·×1cross | 0券后¥63 |  | 字幕：海盗背刺63了",
+        "startSeconds": 6,
+        "endSeconds": 7,
+        "cid": "43036315003",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "subtitle",
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0006.jpg",
+            "seconds": 6
+          },
+          {
+            "file": "frame-0007.jpg",
+            "seconds": 7
+          }
+        ],
+        "subtitleEvidence": [
+          {
+            "text": "海盗背刺63了",
+            "startSeconds": 5.419,
+            "endSeconds": 6.66,
+            "priceCents": 6300
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-auto:b2321d62125822ccf79b88a0",
+      "bvid": "BV1YmHG6LE7d",
+      "sourceUid": "382486276",
+      "sourceAccount": "郭大鑫鑫鑫鑫呀",
+      "videoTitle": "mg强人、钛f91、重力大魔、黄扎古加农、黑京宝梵、hg海涅命运、龙飞、海盗、p2黑扎古1背刺，午间羊毛。",
+      "videoUrl": "https://www.bilibili.com/video/BV1YmHG6LE7d/",
+      "modelName": "海涅命运新生版",
+      "grade": "HG",
+      "scale": null,
+      "priceCents": 9800,
+      "originalPriceCents": null,
+      "priceType": "coupon",
+      "status": "extracted",
+      "confidence": 70,
+      "extractionMethod": "local_auto_visual",
+      "publishedAt": "2026-10-25T05:49:02.000Z",
+      "observedAt": "2026-10-27T01:32:33.000Z",
+      "notes": "画面OCR提取，画面券后价；同一商品主价格区域在至少两张画面重复出现，仍非人工核对。历史报价不保证仍可购买。成功推送后本机截图可自动清理，保留识别文字与原视频时间点。",
+      "alternativePrices": [],
+      "evidence": {
+        "text": "万代hgce2261/144hgce海涅命运新生版高达seed | 0券后¥98 | ",
+        "startSeconds": 25,
+        "endSeconds": 29,
+        "cid": "43036315003",
+        "page": 1,
+        "language": "ai-zh",
+        "subtitleKind": "bilibili-ai",
+        "channels": [
+          "visual"
+        ],
+        "visualFrames": [
+          {
+            "file": "frame-0025.jpg",
+            "seconds": 25
+          },
+          {
+            "file": "frame-0026.jpg",
+            "seconds": 26
+          },
+          {
+            "file": "frame-0027.jpg",
+            "seconds": 27
+          },
+          {
+            "file": "frame-0028.jpg",
+            "seconds": 28
+          },
+          {
+            "file": "frame-0029.jpg",
+            "seconds": 29
+          }
+        ],
+        "subtitleEvidence": []
+      }
     }
   ],
   "meta": {
@@ -6657,7 +6765,7 @@
     "visualCollection": {
       "enabled": true,
       "status": "partial",
-      "checkedParts": 84,
+      "checkedParts": 86,
       "totalParts": 99,
       "failedParts": 9,
       "revision": "visual-2026-10-18.1",
